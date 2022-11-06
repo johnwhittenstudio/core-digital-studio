@@ -509,7 +509,7 @@ function subpage_services_jw($atts) {
 	ob_start();
 	$data = shortcode_atts(array(
 		'headline' => "Course Topics",
-		'text' => "Digital Art has expanded the definition of art and increased the accessibility of art to the world. It is about the tools used to create it, as well as the vision, message, and context of its creation. This course aims to survey technology’s influence on art and culture from a historical and contemporary perspective. Below are the topics we cover in this course.",
+		'text' => "Digital Art has expanded the definition of art and increased the accessibility of art to the world. It is about the tools used to create it, as well as the vision, message, and context of its creation. This course aims to survey technology’s influence on art and culture from a historical and contemporary perspective. Below are the topics covered in this course.",
 	),$atts);
 	?>
 	<div class="sp-j-services-main-container">

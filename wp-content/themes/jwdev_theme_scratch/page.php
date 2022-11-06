@@ -20,7 +20,7 @@
 <!-- 
             <div class="col-lg-12"> -->
 
-                  <!-- <h3><?php the_title();?></h3> -->
+                  <h3><?php the_title();?></h3>
 
 
 
