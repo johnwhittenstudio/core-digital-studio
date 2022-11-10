@@ -554,4 +554,120 @@ function subpage_services_jw($atts) {
 }
 add_shortcode('subpage_services_jw','subpage_services_jw');
 
+function contact_us($atts) {
+	ob_start();
+      $data = shortcode_atts(array(
+            'phone' => "tel:615-887-3367",
+            'email' => "mailto:johnwhitten.studio@gmail.com",
+            'instagram' => "https://www.instagram.com/john.whitten/?hl=en",
+            'facebook' => "https://www.facebook.com/johnwhittenstudio/",
+            'linkedin' => "https://www.linkedin.com/in/johnwhittenstudio/",
+            'github' => "https://github.com/johnwhittenstudio",
+      ),$atts);
+	?>
+	<div id="contact-us">
+		<div id="contact-map">
+			<iframe title="Map of <?php echo get_bloginfo('name') ?>" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86416.51154363637!2d-122.71404574429876!3d45.51512922054555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950b0b7da97427%3A0x1c36b9e6f6d18591!2sPortland%2C%20OR!5e0!3m2!1sen!2sus!4v1668028196386!5m2!1sen!2sus" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		</div>
+		<div id="contact-info">
+			<div class="visit-us">
+                        <h1>John Whitten</h1>
+                        <!-- <h2><?php echo get_bloginfo('name') ?></h2> -->
+                        <h3>Portland, Oregon</h3>
+                        <br>
+                        <p>I'd love to hear from you</p>
+                        <!-- <br> -->
+                        <p><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;
+                              <a href="tel:615-887-3367">615-887-3367 </a><br>
+                              <i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;
+                              <a href="mailto:johnwhitten.studio@gmail.com">johnwhitten.studio@gmail.com</a></p>
+                        <div class="newsletter">
+                              <!-- <?php echo do_shortcode('[gravityform id="3" title="false" description="false"]')?> -->
+                        </div>
+                        <div class="social-icons">
+                              <a href=<?php echo $data['facebook'] ?> target="_blank" rel="noopener">
+                                    <i class="fab fa-facebook-f"></i>
+                              </a>
+                              <a href=<?php echo $data['instagram'] ?>target="_blank" rel="noopener">
+                                    <i class="fab fa-instagram fa-lg"></i>
+                              </a>
+                              <a href=<?php echo $data['linkedin'] ?> target="_blank" rel="noopener">
+                                    <i class="fab fa-linkedin fa-lg"></i>
+                              </a>
+                              <a href=<?php echo $data['github'] ?> target="_blank" rel="noopener">
+                                    <i class="fab fa-github fa-lg"></i>
+                              </a>
+                        </div>
+                  </div>
+		</div>
+	</div>
+	<?php
+	return ob_get_clean();
+}
+add_shortcode('contact_us','contact_us');
 
+function appointment_area($atts) {
+	ob_start();
+	$data = shortcode_atts(array(
+		'background_image' => '/wp-content/uploads/2022/11/vr-crowd.jpeg',
+		'margin_top' => '-5%',
+	),$atts);
+	?>
+	<div class="appointment-area" style="background-image: url('<?php echo $data['background_image']?>'); margin-top: <?php echo $data['margin_top']?>;">
+		<div class="inner-wrapper">
+			<div class="appointment-container" <?php if ( is_front_page() ) { ?> id="hp-appointment-container" <?php } else { ?> id="sp-appointment-container" <?php } ?>>
+				<h2>Make an appointment<br>with us today!</h2>
+				<div class="appointment-box">
+					<a href="tel:<?php the_author_meta( 'phone' )?>" class="blue-button-container">
+						<div class="dark-blue-button">
+							Call us! <?php the_author_meta( 'phone' )?>
+						</div>
+					</a>
+					<a href="/appointment/" class="blue-button-container">
+						<div class="dark-blue-button">
+							Book online today
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+    <svg version="1.1" id="Layer_1" class="appt-bottom-divider" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+       viewBox="0 0 1600 82" style="enable-background:new 0 0 1600 82;" xml:space="preserve">
+    <path d="M0,1.5L1595.6,82H-2L0,1.5z"/>
+    </svg>
+	</div>
+	<?php
+	return ob_get_clean();
+}
+add_shortcode('appointment_area','appointment_area');
+
+function about_page($atts) {
+	ob_start();
+      $data = shortcode_atts(array(
+            'bio-pic' => '/wp-content/uploads/2022/11/John-and-Katherine-DSC_4311-web.jpg',
+            'bio-1' => "John Whitten (he/him) is a visual artist, designer, web developer, and educator whose practice is rooted in both traditional drawing and digital media. His artwork aims to excavate the philosophical significance of what it means to wander through the signals and noise enveloping our world. He has recently exhibited in New York City, Los Angeles, and Portland, and held gallery representation at Charles Hartman Fine Art in Portland from 2017 until the gallery closed in 2022. He co-founded the Thunderstruck Collective and Carnation Contemporary in 2018 and Well Well Projects in 2021. He earned his MFA in Painting and Drawing from the University of Oregon in Eugene, Oregon and his BFA in Studio Fine Art from Watkins College of Art in Nashville, Tennessee.",
+            'bio-2' => "His experience in education includes 7 years as a Full-time Instructor of Digital Art and CORE Studio Art at Oregon State University teaching over 100 term-long courses both in-person and online, 2 years teaching Drawing I at Linn-Benton Community College, 1 year teaching Digital Photography at Clark College, 3 years teaching undergraduate courses in Drawing and Time-Based  Media as a Graduate Teaching Fellow at the University of Oregon, 15 years teaching arts-oriented adult  continuing education and youth pre-college programs, summer camps, and workshops, and 5 years as  an admissions recruiter, academic counselor, and portfolio reviewer for a NASAD accredited college of  art.",
+            'bio-3' => "John is a husband, cat parent, storyteller, coffee lover, and cook. His home and studio are located in Portland, Oregon.",
+	),$atts);
+	?>
+	<div id="about-page">
+	      <div class="about-container<?php if ($remainder == 0) { ?> odd-background<?php } ?>">
+                  <div class="about-container-inner">
+                        <div class="about-photo">
+                        <img id="about-bio-pic" src="<?php echo $data['bio-pic'] ?>" alt="">
+                        </div>
+          <div class="about-text">
+          <br>
+            <p><?php echo $data['bio-1'] ?></p><br>
+            <p><?php echo $data['bio-2'] ?></p><br>
+            <p><?php echo $data['bio-3'] ?></p>
+            
+          </div>
+        </div>
+	</div>
+	
+	</div>
+	<?php
+	return ob_get_clean();
+}
+add_shortcode('about_page','about_page');
