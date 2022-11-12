@@ -1327,14 +1327,14 @@ header .top-bar .sub-menu li .sub-menu {
 .callout-text h3 {
   /* font-family: mrs-eaves-xl-serif, serif; */
   font-size: 28px;
-  color: white;
+  color: white !important;
   font-style: italic;
   margin-bottom: 15px;
 }
 
 .callout-text h2 {
   font-size: 34px;
-  color: white;
+  color: white !important;
   font-weight: bold;
   text-transform: uppercase;
   margin: 0;
@@ -1342,7 +1342,7 @@ header .top-bar .sub-menu li .sub-menu {
 
 .callout {
   text-decoration: underline;
-  color: #1c97d0;
+  /* color: #1c97d0; */
 }
 
 #about-area {
@@ -1384,7 +1384,7 @@ header .top-bar .sub-menu li .sub-menu {
 #about-intro h2 {
   font-size: 44px;
   font-weight: bold;
-  color: #95d9f1;
+  color: #95d9f1 !important;
   text-transform: uppercase;
   margin-bottom: 0;
 }
@@ -1393,10 +1393,11 @@ header .top-bar .sub-menu li .sub-menu {
   font-size: 32px;
   font-style: italic;
   /* font-family: mrs-eaves-xl-serif, serif; */
-  color: #adbfcb;
+  color: #95d9f1 !important;
   margin-bottom: 0;
   font-weight: normal;
 }
+
 
 #about-body {
   right: 0;
@@ -1409,7 +1410,7 @@ header .top-bar .sub-menu li .sub-menu {
 #about-body p {
   font-size: 20px;
   font-weight: bold;
-  color: #95d9f1;
+  color: #95d9f1 !important;
   /* text-transform: uppercase; */
   margin-bottom: 0;
 }
@@ -1493,6 +1494,12 @@ header .top-bar .sub-menu li .sub-menu {
 
 #hp-jservices-text {
   color: #ffffff;
+  font-size: 1.25em;
+  margin-bottom: 20%;
+}
+
+#hp-jservices-intro p {
+  color: #ffffff !important;
   font-size: 1.25em;
   margin-bottom: 20%;
 }
@@ -1726,6 +1733,10 @@ header .top-bar .sub-menu li .sub-menu {
   z-index: 2;
   transform: translateY(100%);
   transition: all .4s ease-out;
+}
+
+.sp-j-service-content p {
+  color: white !important;
 }
 
 /* .sp-j-service-content .j-service-title-box a {
@@ -2073,7 +2084,7 @@ header .top-bar .sub-menu li .sub-menu {
   padding: 0;
 }
 
-.visit-us h1, h2, h3, h4, h5 {
+.visit-us h1, h3, p {
   color: #1c97d0 !important;
 }
 
@@ -2097,11 +2108,13 @@ header .top-bar .sub-menu li .sub-menu {
 
 #footer {
   width: 100vw;
+  height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #95d9f1;
+  /* background-color: #95d9f1; */
+  background-color: #213a51;
 }
 .home #footer {
   padding-top: 50px;
@@ -2133,8 +2146,9 @@ header .top-bar .sub-menu li .sub-menu {
 }
 
 .footer-logo {
-  margin-top: -50px;
-  max-width: 300px;
+  margin-top: 50px;
+  max-width: 200px;
+  filter: drop-shadow( 2px 2px 1px #213a52);
 }
 
 #hp-footer-logo, #sp-footer-logo {
@@ -2353,7 +2367,7 @@ header .top-bar .sub-menu li .sub-menu {
 #copyright-text, #copyright-text a {
   font-size: 18px;
   text-transform: uppercase;
-  color: white;
+  color: #1c97d0;
 }
 
 body:not(.home) #copyright-text {
@@ -2373,13 +2387,13 @@ body:not(.home) #copyright-text {
 ## About
 --------------------------------------------------------------*/
 
-.page-id-567 #content {
+/* .page-id-567 #content {
   width: 100% !important;
   max-width: none !important;
-}
+} */
 
 #about-page {
-  background: linear-gradient(#f1fffe 40%, #648C9A);
+  background: linear-gradient(#f1fffe 40%, #1c97d0);
   width: 100vw;
 }
 
@@ -2387,7 +2401,6 @@ body:not(.home) #copyright-text {
   display: flex;
   /* background: linear-gradient(#f1fffe, #1c97d0);  */
   /* background: linear-gradient(to right top,#1c97d0 10%,#f1fffe 60%); */
-
   width: 100vw;
   height: 100vh;
   justify-content: center;
@@ -2441,8 +2454,152 @@ body:not(.home) #copyright-text {
 }
 
 .about-text p {
-  color: #013f50;
+  color: #013f50 !important;
   line-height: 25px;
   font-size: 18px;
   font-weight: 600;
 }
+
+.about-text a {
+  text-decoration: none;
+  color: #013f50 !important;
+}
+
+.about-text a:hover {
+  text-decoration: none;
+  color: #239bd2 !important;
+}
+
+/*--------------------------------------------------------------
+## Philosophy
+--------------------------------------------------------------*/
+
+
+
+#philosophy-page {
+  background: linear-gradient(#f1fffe 40%, #1c97d0);
+  width: 100vw;
+}
+
+.philosophy-container {
+  display: flex;
+  /* background: linear-gradient(#f1fffe, #1c97d0);  */
+  /* background: linear-gradient(to right top,#1c97d0 10%,#f1fffe 60%); */
+  width: 100%;
+  margin: 0 5%;
+  height: 100vh;
+  justify-content: center;
+  margin: 5% 5%;
+}
+
+.odd-background {
+  display: flex;
+  min-height: 900px;
+  background-image: url(/wp-content/uploads/2022/11/staff-section-highlight.png);
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+
+.philosophy-container-inner {
+  width: 95%;
+  margin: 0 2.5%;
+  display: flex;
+  justify-content: center;
+
+  /* align-items: center; */
+}
+
+
+.philosophy-photo img {
+  width: 100%;
+  transform: translate(12px, 12px);
+  max-width: 100%;
+}
+/* 
+.philosophy-text {
+  padding: 2% 3% 0 5%;
+} */
+
+.philosophy-card {
+  /* background: $color-one; */
+  box-shadow: 0 0 20px #213a51;
+  border: solid 3px  #013f50a6;
+  border-radius: 5px;
+  margin: 50px 20px 50px 20px;
+  width: calc(33.3333% - 40px); /* 1/3 minus the margins (20+20) */
+  padding: 15px;
+  text-align: center;
+  background: #fcebfc;
+  float: left;
+  @media (max-width: 768px) {
+    margin: 10px 20px;
+    width: calc(100% - 40px);
+    &:first-child {
+      margin-top: 20px;
+    }
+  }
+
+}
+
+
+.philosophy-text {
+  /* max-width: 90%;
+  max-height: 90%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  text-indent: .5rem;
+  /* width: 60%; */
+  margin: 3% 5%;
+}
+
+
+
+.philosophy-text p {
+  color: #013f50 !important;
+  line-height: 40px;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.philosophy-img img {
+  max-width: 150px;
+  color: #013f50 !important;
+  filter: drop-shadow( 2px 2px .5px #213a5276);
+  margin: 5%;
+}
+
+
+
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
+
+.card {
+  /* background: $color-one; */
+  box-shadow: 0 0 20px #213a51;
+  border-radius: 5px;
+  margin: 50px 20px 20px 20px;
+  width: calc(33.3333% - 40px); /* 1/3 minus the margins (20+20) */
+  padding: 20px;
+  text-align: center;
+  color: #fb7cf96d;
+  float: left;
+  @media (max-width: 768px) {
+    margin: 10px 20px;
+    width: calc(100% - 40px);
+    &:first-child {
+      margin-top: 20px;
+    }
+  }
+
+}
+

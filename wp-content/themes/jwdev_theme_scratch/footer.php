@@ -16,7 +16,7 @@
   </div>
   <?php } else { ?>
   <div class="inner-wrapper" id="subpage-footers">
-    <img id="sp-footer-logo" class="footer-logo" src="/wp-content/uploads/2020/03/footer-logo.png" alt="<?php echo get_bloginfo('name') ?> logo">
+    <img id="sp-footer-logo" class="footer-logo" src="/wp-content/uploads/2022/11/johnwhittenstudiologo-1.png" alt="<?php echo get_bloginfo('name') ?> logo">
     <div id="subpage-footer-inner">
       <div id="sp-footer-left" class="subpage-footer-half">
         <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Subpage Footer: One") ) : ?>

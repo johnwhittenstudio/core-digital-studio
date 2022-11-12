@@ -390,19 +390,19 @@ function welcome_section($atts) {
 	</div>
 	<div id="welcome-section">
 		<div id="three-callouts">
-			<a href="/about/veterinarians/" style="background-image: url('/wp-content/uploads/2022/11/course-overview.jpg')" class="callout">
+			<a href="/course/overview" style="background-image: url('/wp-content/uploads/2022/11/course-overview.jpg')" class="callout">
 				<div class="callout-text">
 					<h3>Guiding and Informative</h3>
 					<h2>Course<br>Overview</h2>
 				</div>
 			</a>
-			<a href="/services/" style="background-image: url('/wp-content/uploads/2022/11/lessons.jpg')" class="callout">
+			<a href="/lessons" style="background-image: url('/wp-content/uploads/2022/11/lessons.jpg')" class="callout">
 				<div class="callout-text">
 					<h3>Inspiring and Instructive</h3>
 					<h2>Weekly<br>Lessons</h2>
 				</div>
 			</a>
-			<a href="/appointment/" style="background-image: url('/wp-content/uploads/2022/11/projects.jpg')" class="callout">
+			<a href="/assignments/projects" style="background-image: url('/wp-content/uploads/2022/11/projects.jpg')" class="callout">
 				<div class="callout-text">
 					<h3>Exciting and Challenging</h3>
 					<h2>Creative<br>Projects</h2>
@@ -645,8 +645,8 @@ function about_page($atts) {
 	ob_start();
       $data = shortcode_atts(array(
             'bio-pic' => '/wp-content/uploads/2022/11/John-and-Katherine-DSC_4311-web.jpg',
-            'bio-1' => "John Whitten (he/him) is a visual artist, designer, web developer, and educator whose practice is rooted in both traditional drawing and digital media. His artwork aims to excavate the philosophical significance of what it means to wander through the signals and noise enveloping our world. He has recently exhibited in New York City, Los Angeles, and Portland, and held gallery representation at Charles Hartman Fine Art in Portland from 2017 until the gallery closed in 2022. He co-founded the Thunderstruck Collective and Carnation Contemporary in 2018 and Well Well Projects in 2021. He earned his MFA in Painting and Drawing from the University of Oregon in Eugene, Oregon and his BFA in Studio Fine Art from Watkins College of Art in Nashville, Tennessee.",
-            'bio-2' => "His experience in education includes 7 years as a Full-time Instructor of Digital Art and CORE Studio Art at Oregon State University teaching over 100 term-long courses both in-person and online, 2 years teaching Drawing I at Linn-Benton Community College, 1 year teaching Digital Photography at Clark College, 3 years teaching undergraduate courses in Drawing and Time-Based  Media as a Graduate Teaching Fellow at the University of Oregon, 15 years teaching arts-oriented adult  continuing education and youth pre-college programs, summer camps, and workshops, and 5 years as  an admissions recruiter, academic counselor, and portfolio reviewer for a NASAD accredited college of  art.",
+            'bio-1' => "John Whitten (he/him) is a visual artist, designer, web developer, and educator whose practice is rooted in both traditional drawing and digital media. His artwork aims to excavate the philosophical significance of what it means to wander through the signals and noise enveloping our world. He has recently exhibited in New York City, Los Angeles, and Portland, and held gallery representation at Charles Hartman Fine Art in Portland from 2017 until the gallery closed in 2022. He is a co-founding director of the Thunderstruck Collective artist residency. He also co-founded the Portland-based artist-collective galleries Carnation Contemporary in 2018 and Well Well Projects in 2021. He earned his MFA in Painting and Drawing from the University of Oregon in Eugene, Oregon and his BFA in Studio Fine Art from Watkins College of Art in Nashville, Tennessee.",
+            'bio-2' => "His experience in education includes 7 years as a Full-time Instructor of Digital Art & Design, Experimental Video, and Media Aesthetics at Oregon State University teaching over 100 term-long courses both in-person and online, 2 years teaching Drawing I at Linn-Benton Community College, 1 year teaching Digital Photography at Clark College, 3 years teaching undergraduate courses in Drawing and Time-Based  Media as a Graduate Teaching Fellow at the University of Oregon, 15 years teaching arts-oriented adult  continuing education and youth pre-college programs, summer camps, and workshops, and 5 years as  an admissions recruiter, academic counselor, and portfolio reviewer for a NASAD accredited college of  art.",
             'bio-3' => "John is a husband, cat parent, storyteller, coffee lover, and cook. His home and studio are located in Portland, Oregon.",
 	),$atts);
 	?>
@@ -660,7 +660,8 @@ function about_page($atts) {
           <br>
             <p><?php echo $data['bio-1'] ?></p><br>
             <p><?php echo $data['bio-2'] ?></p><br>
-            <p><?php echo $data['bio-3'] ?></p>
+            <p><?php echo $data['bio-3'] ?>
+            His visual artwork can be viewed at <a href="https://www.johnwhitten.com/" class="visual-art-website">www.johnwhitten.com</a><span>.</span></p>
             
           </div>
         </div>
@@ -671,3 +672,60 @@ function about_page($atts) {
 	return ob_get_clean();
 }
 add_shortcode('about_page','about_page');
+
+function philosophy_page($atts) {
+	ob_start();
+      $data = shortcode_atts(array(
+            // 'bio-pic' => '/wp-content/uploads/2022/11/John-and-Katherine-DSC_4311-web.jpg',
+            'philosophy-1-img' => '/wp-content/uploads/2022/11/accessibility-icon-p.png',
+
+            'philosophy-1' => "John Whitten wants to excite students to be engaged creators of visual culture in the world instead of passive  consumers. He believes in the power of nurturing individual creativity to ignite self-expression and transform  the way people engage in their lives, families, and communities. It is his viewpoint that everyone should  have equal access to education and opportunities for self-advancement. His technical instruction emphasizes intention and experimentation and covers an array of cutting-edge, industry-level as well as free, open-source software to ensure students learn the tools needed to be competitive in today's market and while developing a sustainable, agile set of skills.",
+
+            'philosophy-2-img' => '/wp-content/uploads/2022/11/diversity-icon-p.png',
+
+            'philosophy-2' => "Diversity and difference are not  only anticipated in his classroom, but are cherished. An inclusive culture of respect that honors the rights,  safety, dignity, and worth of every individual is essential to the success of any learning environment.  John recognizes and strives to be conscious of his privilege, and is committed to creating a culturally-responsive, anti-racist, and accessible space that is  free of discrimination and bias. His classroom is a laboratory for experimentation and a platform for  expression, which offers a space of open dialogue wherein he emphasizes the importance of learning to  read, grapple with, and critically discuss an idea and object rather than coming to an easy judgment.",
+
+            'philosophy-3-img' => '/wp-content/uploads/2022/11/strategy-icon-p.png',
+
+            'philosophy-3' => "His goal is to  teach students strategies of thinking and engaging with ideas, materials, and processes so they may  formulate conceptual objectives and apply critical analysis to future work. His hope is that students gain  both skills and confidence by being afforded the opportunity to experiment and push the parameters of  an assignment in a setting that values failure as part of the learning process. Ideally, students will create  a portfolio that excites an exploration of ideas and interests, serves as a means of personal expression,  and stimulates a larger ongoing artistic practice.",
+	),$atts);
+	?>
+	<div id="philosophy-page">
+	      <div class="philosophy-container<?php if ($remainder == 0) { ?> odd-background<?php } ?>">
+                  <div class="philosophy-container-inner">
+
+                        <div class="philosophy-card">
+                              <div class="philosophy-img">
+                                    <img id="philosophy-access-pic" src="<?php echo $data['philosophy-1-img'] ?>" alt="">
+                              </div>
+                              <div class="philosophy-text">
+                                    <p><?php echo $data['philosophy-1'] ?></p>
+                              </div>
+                        </div>
+
+                        <div class="philosophy-card">
+                              <div class="philosophy-img">
+                                    <img id="philosophy-diversity-pic" src="<?php echo $data['philosophy-2-img'] ?>" alt="">
+                              </div>
+                              <div class="philosophy-text">
+                                    <p><?php echo $data['philosophy-2'] ?></p>
+                              </div>
+                        </div>
+
+
+                        <div class="philosophy-card">
+                              <div class="philosophy-img" >
+                                    <img id="philosophy-strategy-pic"  src="<?php echo $data['philosophy-3-img'] ?> " alt="">
+                              </div>
+                              <div class="philosophy-text">
+                                    <p><?php echo $data['philosophy-3'] ?></p>
+                              </div>
+                        </div>
+
+                  </div>
+	      </div>
+	</div>
+	<?php
+	return ob_get_clean();
+}
+add_shortcode('philosophy_page','philosophy_page');
