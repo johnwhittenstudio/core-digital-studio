@@ -1,10 +1,10 @@
 <?php get_header();?>
 
-<section class="page-wrap">
-<div class="container">
+<!-- <section class="page-wrap">
+<div class="container"> -->
 
       <div class="page">
-            <section class="row">
+            <!-- <section class="row"> -->
 
 
                   <!-- <div class="col-lg-3">
@@ -30,11 +30,11 @@
                         <!-- </div> -->
                   <!-- </div> -->
 
-            </section>
+            <!-- </section> -->
       </div>
 
-</div>
-</section>
+<!-- </div>
+</section> -->
 
 
 <?php get_footer();?>

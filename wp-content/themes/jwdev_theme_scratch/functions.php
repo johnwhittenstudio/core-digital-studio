@@ -396,7 +396,7 @@ function welcome_section($atts) {
 					<h2>Course<br>Content</h2>
 				</div>
 			</a>
-			<a href="/lessons" style="background-image: url('/wp-content/uploads/2022/11/lessons.jpg')" class="callout">
+			<a href="/lessons/week-1" style="background-image: url('/wp-content/uploads/2022/11/lessons.jpg')" class="callout">
 				<div class="callout-text">
 					<h3>Inspiring and Instructive</h3>
 					<h2>Weekly<br>Lessons</h2>
@@ -503,6 +503,48 @@ function homepage_services_jw($atts) {
 	return ob_get_clean();
 }
 add_shortcode('homepage_services_jw','homepage_services_jw');
+
+
+function course_overview($atts) {
+	ob_start();
+	$data = shortcode_atts(array(
+            'banner_img' => '/wp-content/uploads/2022/11/CoreDigitalStudiobanner.gif',
+		'headline' => "Welcome to Core: Digital Studio!",
+		'intro_1' => "I look forward to working with you this term. To be successful in this course, please plan to log in to participate on several days each week.", 
+            'intro_2' => "Core: Digital Studio is a hybrid course. We will often meet in person in the computer lab and remotely via Zoom. There will be ongoing learning activities in Canvas that require your participation. This course is designed to include student-content, student-student, and student-instructor interaction.",
+            'intro_3' => "Please be sure to read the syllabus and other information linked below, as these essential documents contain the answers to many frequently asked questions.",
+            'technical_header' => "Technical Assistance",
+            'technical_body' => "If you experience computer difficulties, need help downloading a browser or plug-in, assistance logging into the course, or if you experience any errors or problems while in your online course, contact the OSU Help Desk for assistance. You can call (541) 737-3474, email osuhelpdesk@oregonstate.edu or visit the OSU Computer Helpdesk online.",
+	),$atts);
+	?>
+	<div class="course-overview-main-container">
+		<div id="course-overview-intro-container">
+                  <img id="course-overview-image" src="<?php echo $data['banner_img'] ?>" alt="">
+			<h2 id="course-overview-headline"><?php echo $data['headline']?></h2>
+                  <p id="course-overview-text"><?php echo $data['intro_1'] ?></p>
+                  <p id="course-overview-text"><?php echo $data['intro_2'] ?></p>
+                  <p id="course-overview-text"><?php echo $data['intro_3'] ?></p>
+
+                  <div class="overview-button-container">
+                        <a href='https://docs.google.com/document/d/1f7vO6D3-BhW7rCC6Xl-iU4O3hPgfvw39Td98QfT4jq0/edit?usp=sharing' target='_blank' class="btn" role="button" aria-disabled="true">Syllabus</a>
+                        <a href="https://docs.google.com/document/d/1wp38X7InjTG0rNGzKmpTwKVIQprT7kh97GR2IGHsddE/edit?usp=sharing" class="btn" role="button" aria-disabled="true">Schedule</a>
+                        <a href="/course/topics" class="btn" role="button" aria-disabled="true">Topics</a>
+                        <a href="/course/policies" class="btn" role="button" aria-disabled="true">Policies</a>
+                        <a href="/course/services" class="btn" role="button" aria-disabled="true">Services</a>
+                  </div>
+
+                  <p id="technical_header"><?php echo $data['technical_header'] ?></p>
+                  <p id="technical_body"><?php echo $data['technical_body'] ?></p>
+            </div>
+		<div id="course-overview">
+
+
+			</div>
+      </div>
+	<?php
+	return ob_get_clean();
+}
+add_shortcode('course_overview','course_overview');
 
 
 function subpage_services_jw($atts) {
@@ -645,8 +687,8 @@ function about_page($atts) {
 	ob_start();
       $data = shortcode_atts(array(
             'bio-pic' => '/wp-content/uploads/2022/11/John-and-Katherine-DSC_4311-web.jpg',
-            'bio-1' => "John Whitten (he/him) is a visual artist, designer, web developer, and educator. His artist practice is rooted in both traditional drawing, sculpture, and digital media. His artwork aims to excavate the philosophical significance of what it means to wander through the signals and noise enveloping our world. He has recently exhibited in New York City, Los Angeles, and Portland, and held gallery representation at Charles Hartman Fine Art in Portland from 2017 until the gallery closed in 2022. He is a co-founding director of the Thunderstruck Collective artist residency. He also co-founded the Portland-based artist-collective galleries Carnation Contemporary in 2018 and Well Well Projects in 2021. He earned his MFA in Painting and Drawing from the University of Oregon in Eugene, Oregon and his BFA in Studio Fine Art from Watkins College of Art in Nashville, Tennessee.",
-            'bio-2' => "His experience in education includes 7 years as a Full-time Instructor of Digital Art & Design, Experimental Animation and Video, and Media Aesthetics at Oregon State University teaching over 100 term-long courses both in-person and online, 2 years teaching Drawing I at Linn-Benton Community College, 1 year teaching Digital Photography at Clark College, 3 years teaching undergraduate courses in Drawing and Time-Based  Media as a Graduate Teaching Fellow at the University of Oregon, 15 years teaching arts-oriented adult  continuing education and youth pre-college programs, summer camps, and workshops, and 5 years as  an admissions recruiter, academic counselor, and portfolio reviewer for a NASAD accredited college of  art.",
+            'bio-1' => "John Whitten (he/him) is a visual artist, designer, web developer, and educator. His artistic practice is rooted in both traditional drawing, sculpture, and digital media. His artwork aims to excavate the philosophical significance of what it means to wander through the signals and noise enveloping our world. He has recently exhibited in New York City, Los Angeles, and Portland, and held gallery representation at Charles Hartman Fine Art in Portland from 2017 until the gallery closed in 2022. He is a co-founding director of the Thunderstruck Collective artist residency. He also co-founded the Portland-based artist-collective galleries Carnation Contemporary in 2018 and Well Well Projects in 2021. He earned his MFA in Painting and Drawing from the University of Oregon in Eugene, Oregon and his BFA in Studio Fine Art from Watkins College of Art in Nashville, Tennessee.",
+            'bio-2' => "His 15 years experience in education includes 7 years as a Full-time Instructor of Digital Art & Design, Experimental Animation and Video, and Media Aesthetics at Oregon State University teaching over 100 term-long courses both in-person and online, 2 years teaching Drawing I at Linn-Benton Community College, 1 year teaching Digital Photography at Clark College, 3 years teaching undergraduate courses in Drawing and Time-Based  Media as a Graduate Teaching Fellow at the University of Oregon, 15 years teaching arts-oriented adult  continuing education and youth pre-college programs, summer camps, and workshops, and 5 years as  an admissions recruiter, academic counselor, and portfolio reviewer for a NASAD accredited college of  art.",
             'bio-3' => "John is a husband, cat parent, storyteller, coffee lover, and cook. His home and studio are located in Portland, Oregon.",
 	),$atts);
 	?>
@@ -654,19 +696,17 @@ function about_page($atts) {
 	      <div class="about-container<?php if ($remainder == 0) { ?> odd-background<?php } ?>">
                   <div class="about-container-inner">
                         <div class="about-photo">
-                        <img id="about-bio-pic" src="<?php echo $data['bio-pic'] ?>" alt="">
+                              <img id="about-bio-pic" src="<?php echo $data['bio-pic'] ?>" alt="">
                         </div>
-          <div class="about-text">
-          <br>
-            <p><?php echo $data['bio-1'] ?></p><br>
-            <p><?php echo $data['bio-2'] ?></p><br>
-            <p><?php echo $data['bio-3'] ?>
-            His visual artwork can be viewed at <a href="https://www.johnwhitten.com/" class="visual-art-website">www.johnwhitten.com</a><span>.</span></p>
-            
-          </div>
-        </div>
-	</div>
-	
+                        <div class="about-text">
+                        <br>
+                              <p><?php echo $data['bio-1'] ?></p><br>
+                              <p><?php echo $data['bio-2'] ?></p><br>
+                              <p><?php echo $data['bio-3'] ?>
+                              His visual artwork can be viewed at <a href="https://www.johnwhitten.com/" class="visual-art-website">www.johnwhitten.com</a><span>.</span></p>
+                        </div>
+                  </div>
+            </div>
 	</div>
 	<?php
 	return ob_get_clean();
@@ -691,7 +731,7 @@ function philosophy_page($atts) {
 	),$atts);
 	?>
 	<div id="philosophy-page">
-	      <div class="philosophy-container<?php if ($remainder == 0) { ?> odd-background<?php } ?>">
+	      <div class="philosophy-container">
                   <div class="philosophy-container-inner">
 
                         <div class="philosophy-card">
@@ -1038,56 +1078,54 @@ add_shortcode('weekly_lesson_page_5','weekly_lesson_page_5');
 function weekly_lesson_page_6($atts) {
 	ob_start();
       $data = shortcode_atts(array(
-            'week-1-img' => '/wp-content/uploads/2022/11/Week-1.png',
+            'week-6-img' => '/wp-content/uploads/2022/11/Week-6.png',
 
-            'week-1-header' => "Week 1 - Overview",
-            'week-1-intro-header' => ' ',
-            'week-1-intro-body' => " ",
+            'week-6-header' => "Week 6 - Overview",
+            'week-6-intro-header' => 'HOMEBODIES',
+            'week-6-intro-body' => "This week we will wrap up Project 2: Video Remix. Additionally, this week we introduce and contextualize Project 3: 3-Dimensional Forms. We will look at artists using the site of home as a space for inspiration and artistic production. We will watch videos introducing artists Rachel Whiteread and Do Ho Suh. We will begin working with Google SketchUp to create 3D forms in a virtual space. Through discussion posts, we will also analyze and reflect on personal connections to materials and textures, and offer feedback to our peers.",
 
-            'week-1-learning-head' => 'Weekly Learning Objectives',
-            'week-1-learning-body' => "After successful completion of this week, you will be able to:",
-            'week-1-learning-objective-1' => " ",
-            'week-1-learning-objective-2' => " ",
-            'week-1-learning-objective-3' => " ",
-            'week-1-learning-objective-4' => " ",
+            'week-6-learning-head' => 'Weekly Learning Objectives',
+            'week-6-learning-body' => "After successful completion of this week, you will be able to:",
+            'week-6-learning-objective-1' => "Recognize artists working with the space of home as a site for inspiration and artistic production.",
+            'week-6-learning-objective-2' => "Begin familiarizing ourselves with SketchUp in order to create unique 3D objects in a virtual space.",
+            'week-6-learning-objective-3' => "Reflect, analyze and describe personal connections with various materials and textures through discussion posts.",
+            
 
-            'week-1-task-head' => "Task List",
-            'week-1-task-body' => "In order to achieve these learning outcomes, please make sure to complete the following in our Canvas LMS:",
-            'week-1-task-1' => "Work through the material on the Week 1 – Learning Content page.",
-            'week-1-task-2' => " ",
-            'week-1-task-3' => " ",
-            'week-1-task-4' => " ",
-            'week-1-task-5' => " ",
-            'week-1-task-6' => " ",
+            'week-6-task-head' => "Task List",
+            'week-6-task-body' => "In order to achieve these learning outcomes, please make sure to complete the following in our Canvas LMS:",
+            'week-6-task-1' => "Work through the material on the Week 6 – Learning Content page.",
+            'week-6-task-2' => "Turn in Project 2 - Video Remix.",
+            'week-6-task-3' => "Participate in the Peer Review Discussion: Video Remix.",
+            'week-6-task-4' => "Participate in the Discussion: Digital SketchUp Model.",
+            'week-6-task-5' => "Complete the Week 6 - Homework + Quiz.",
+            'week-6-task-6' => "Begin working on Project 3 – 3-Dimensional Forms (Due Week 8)",
 	),$atts);
 	?>
 <div class="page">
       <section class="row">
             <div class="page-image">
-                  <img id="week-1-img"  src="<?php echo $data['week-1-img'] ?> " alt="">
+                  <img id="week-6-img"  src="<?php echo $data['week-6-img'] ?> " alt="">
             </div>
             <div class="page-text">
-                  <h1><?php echo $data['week-1-header'] ?></h1><br>
-                        <h2><?php echo $data['week-1-intro-header'] ?></h2>
-                              <p><?php echo $data['week-1-intro-body'] ?></p>              
-                  <h3><?php echo $data['week-1-learning-head'] ?></h3>
-                        <p><?php echo $data['week-1-learning-body'] ?></p>
+                  <h1><?php echo $data['week-6-header'] ?></h1><br>
+                        <h2><?php echo $data['week-6-intro-header'] ?></h2>
+                              <p><?php echo $data['week-6-intro-body'] ?></p>              
+                  <h3><?php echo $data['week-6-learning-head'] ?></h3>
+                        <p><?php echo $data['week-6-learning-body'] ?></p>
                               <ol>
-                                    <li><?php echo $data['week-1-learning-objective-1'] ?></li>
-                                    <li><?php echo $data['week-1-learning-objective-2'] ?></li>
-                                    <li><?php echo $data['week-1-learning-objective-3'] ?></li>
-                                    <li><?php echo $data['week-1-learning-objective-4'] ?></li>
+                                    <li><?php echo $data['week-6-learning-objective-1'] ?></li>
+                                    <li><?php echo $data['week-6-learning-objective-2'] ?></li>
+                                    <li><?php echo $data['week-6-learning-objective-3'] ?></li>
                               </ol>            
-                  <h3><?php echo $data['week-1-task-head'] ?></h3>
-                        <p><?php echo $data['week-1-task-body'] ?></p>
+                  <h3><?php echo $data['week-6-task-head'] ?></h3>
+                        <p><?php echo $data['week-6-task-body'] ?></p>
                               <ul>
-                                    <li><?php echo $data['week-1-task-1'] ?></li>
-                                    <li><?php echo $data['week-1-task-2'] ?></li>
-                                    <li><?php echo $data['week-1-task-3'] ?></li>
-                                    <li><?php echo $data['week-1-task-4'] ?></li>
-                                    <li><?php echo $data['week-1-task-5'] ?></li>
-                                    <li><?php echo $data['week-1-task-6'] ?></li>
-                                    <li><?php echo $data['week-1-task-7'] ?></li>
+                                    <li><?php echo $data['week-6-task-1'] ?></li>
+                                    <li><?php echo $data['week-6-task-2'] ?></li>
+                                    <li><?php echo $data['week-6-task-3'] ?></li>
+                                    <li><?php echo $data['week-6-task-4'] ?></li>
+                                    <li><?php echo $data['week-6-task-5'] ?></li>
+                                    <li><?php echo $data['week-6-task-6'] ?></li>
                               </ul>
             </div>
       </section>
@@ -1103,56 +1141,47 @@ add_shortcode('weekly_lesson_page_6','weekly_lesson_page_6');
 function weekly_lesson_page_7($atts) {
 	ob_start();
       $data = shortcode_atts(array(
-            'week-1-img' => '/wp-content/uploads/2022/11/Week-1.png',
+            'week-7-img' => '/wp-content/uploads/2022/11/Week-7.png',
 
-            'week-1-header' => "Week 1 - Overview",
-            'week-1-intro-header' => ' ',
-            'week-1-intro-body' => " ",
+            'week-7-header' => "Week 7 - Overview",
+            'week-7-intro-header' => 'DIGITAL TECHNOLOGIES AS A MEDIUM',
+            'week-7-intro-body' => "This week we will go over how digital technologies as a medium, which implies that from the production to the experience, the digital medium is explicitly explored and utilised in the artmaking process. We will be introduced to various form of digital art, such as Film, video, and animation, Internet art and networked art, Software art, Virtual reality, and Sound and Music. We will continue to look at artists working with different methods of digital process with an emphasis on Golan Levin, Jennifer Steinkamp, and Jacolby Satterwhite.",
 
-            'week-1-learning-head' => 'Weekly Learning Objectives',
-            'week-1-learning-body' => "After successful completion of this week, you will be able to:",
-            'week-1-learning-objective-1' => " ",
-            'week-1-learning-objective-2' => " ",
-            'week-1-learning-objective-3' => " ",
-            'week-1-learning-objective-4' => " ",
+            'week-7-learning-head' => 'Weekly Learning Objectives',
+            'week-7-learning-body' => "After successful completion of this week, you will be able to:",
+            'week-7-learning-objective-1' => "Identify various artists working with and through the digital medium.",
+            'week-7-learning-objective-2' => "Recognize various digital art forms, such as film, video, animation, internet work and networked art, software art, virtual reality, and sound and music.",
 
-            'week-1-task-head' => "Task List",
-            'week-1-task-body' => "In order to achieve these learning outcomes, please make sure to complete the following in our Canvas LMS:",
-            'week-1-task-1' => "Work through the material on the Week 1 – Learning Content page.",
-            'week-1-task-2' => " ",
-            'week-1-task-3' => " ",
-            'week-1-task-4' => " ",
-            'week-1-task-5' => " ",
-            'week-1-task-6' => " ",
+            'week-7-task-head' => "Task List",
+            'week-7-task-body' => "In order to achieve these learning outcomes, please make sure to complete the following in our Canvas LMS:",
+            'week-7-task-1' => "Work through the material on the Week 7 – Learning Content page.",
+            'week-7-task-2' => "Comment on two classmates' posts in the Week 6 - Discussion: Digital SketchUp Model.",
+            'week-7-task-3' => "Turn in the Practice Exercise: Google SketchUp Practice.",
+            'week-7-task-4' => "Begin Project 3 – 3-Dimensional Forms (Due Week 8).",
 	),$atts);
 	?>
 <div class="page">
       <section class="row">
             <div class="page-image">
-                  <img id="week-1-img"  src="<?php echo $data['week-1-img'] ?> " alt="">
+                  <img id="week-7-img"  src="<?php echo $data['week-7-img'] ?> " alt="">
             </div>
             <div class="page-text">
-                  <h1><?php echo $data['week-1-header'] ?></h1><br>
-                        <h2><?php echo $data['week-1-intro-header'] ?></h2>
-                              <p><?php echo $data['week-1-intro-body'] ?></p>              
-                  <h3><?php echo $data['week-1-learning-head'] ?></h3>
-                        <p><?php echo $data['week-1-learning-body'] ?></p>
+                  <h1><?php echo $data['week-7-header'] ?></h1><br>
+                        <h2><?php echo $data['week-7-intro-header'] ?></h2>
+                              <p><?php echo $data['week-7-intro-body'] ?></p>              
+                  <h3><?php echo $data['week-7-learning-head'] ?></h3>
+                        <p><?php echo $data['week-7-learning-body'] ?></p>
                               <ol>
-                                    <li><?php echo $data['week-1-learning-objective-1'] ?></li>
-                                    <li><?php echo $data['week-1-learning-objective-2'] ?></li>
-                                    <li><?php echo $data['week-1-learning-objective-3'] ?></li>
-                                    <li><?php echo $data['week-1-learning-objective-4'] ?></li>
+                                    <li><?php echo $data['week-7-learning-objective-1'] ?></li>
+                                    <li><?php echo $data['week-7-learning-objective-2'] ?></li>
                               </ol>            
-                  <h3><?php echo $data['week-1-task-head'] ?></h3>
-                        <p><?php echo $data['week-1-task-body'] ?></p>
+                  <h3><?php echo $data['week-7-task-head'] ?></h3>
+                        <p><?php echo $data['week-7-task-body'] ?></p>
                               <ul>
-                                    <li><?php echo $data['week-1-task-1'] ?></li>
-                                    <li><?php echo $data['week-1-task-2'] ?></li>
-                                    <li><?php echo $data['week-1-task-3'] ?></li>
-                                    <li><?php echo $data['week-1-task-4'] ?></li>
-                                    <li><?php echo $data['week-1-task-5'] ?></li>
-                                    <li><?php echo $data['week-1-task-6'] ?></li>
-                                    <li><?php echo $data['week-1-task-7'] ?></li>
+                                    <li><?php echo $data['week-7-task-1'] ?></li>
+                                    <li><?php echo $data['week-7-task-2'] ?></li>
+                                    <li><?php echo $data['week-7-task-3'] ?></li>
+                                    <li><?php echo $data['week-7-task-4'] ?></li>
                               </ul>
             </div>
       </section>
@@ -1169,56 +1198,50 @@ add_shortcode('weekly_lesson_page_7','weekly_lesson_page_7');
 function weekly_lesson_page_8($atts) {
 	ob_start();
       $data = shortcode_atts(array(
-            'week-1-img' => '/wp-content/uploads/2022/11/Week-1.png',
+            'week-8-img' => '/wp-content/uploads/2022/11/Week-8.png',
 
-            'week-1-header' => "Week 1 - Overview",
-            'week-1-intro-header' => ' ',
-            'week-1-intro-body' => " ",
+            'week-8-header' => "Week 8 - Overview",
+            'week-8-intro-header' => 'WTF? TEXT AS ART',
+            'week-8-intro-body' => "This week we will be researching “Text as Art” and “The History of Zines” in order to inform and inspire our last project, an Artist Zine. There are many different ways artists approach using text in their artwork. Some artists explore original texts they create, some artists use found or appropriated text as quotation, others use text in a purely formal manner that isn’t about what the words are saying at all. We will be exploring the use of text and language in art, while simultaneously considering the role zines have played in the history of art as protest.",
 
-            'week-1-learning-head' => 'Weekly Learning Objectives',
-            'week-1-learning-body' => "After successful completion of this week, you will be able to:",
-            'week-1-learning-objective-1' => " ",
-            'week-1-learning-objective-2' => " ",
-            'week-1-learning-objective-3' => " ",
-            'week-1-learning-objective-4' => " ",
+            'week-8-learning-head' => 'Weekly Learning Objectives',
+            'week-8-learning-body' => "After successful completion of this week, you will be able to:",
+            'week-8-learning-objective-1' => "Identify various artists working with and through the the use of text.",
+            'week-8-learning-objective-2' => "Recognize various text art forms, such as erasure poetry, zines, animation, video, text as material, graffiti, and found text.",
 
-            'week-1-task-head' => "Task List",
-            'week-1-task-body' => "In order to achieve these learning outcomes, please make sure to complete the following in our Canvas LMS:",
-            'week-1-task-1' => "Work through the material on the Week 1 – Learning Content page.",
-            'week-1-task-2' => " ",
-            'week-1-task-3' => " ",
-            'week-1-task-4' => " ",
-            'week-1-task-5' => " ",
-            'week-1-task-6' => " ",
+            'week-8-task-head' => "Task List",
+            'week-8-task-body' => "In order to achieve these learning outcomes, please make sure to complete the following in our Canvas LMS:",
+            'week-8-task-1' => "Work through the material on the Week 8 – Learning Content page.",
+            'week-8-task-2' => "Turn in Project 3 - 3-Dimensional Forms.",
+            'week-8-task-3' => "Participate in the Peer Review Discussion: 3-Dimensional Forms.",
+            'week-8-task-4' => " Complete Week 8 - Homework + Quiz.",
+
 	),$atts);
 	?>
 <div class="page">
       <section class="row">
             <div class="page-image">
-                  <img id="week-1-img"  src="<?php echo $data['week-1-img'] ?> " alt="">
+                  <img id="week-8-img"  src="<?php echo $data['week-8-img'] ?> " alt="">
             </div>
             <div class="page-text">
-                  <h1><?php echo $data['week-1-header'] ?></h1><br>
-                        <h2><?php echo $data['week-1-intro-header'] ?></h2>
-                              <p><?php echo $data['week-1-intro-body'] ?></p>              
-                  <h3><?php echo $data['week-1-learning-head'] ?></h3>
-                        <p><?php echo $data['week-1-learning-body'] ?></p>
+                  <h1><?php echo $data['week-8-header'] ?></h1><br>
+                        <h2><?php echo $data['week-8-intro-header'] ?></h2>
+                              <p><?php echo $data['week-8-intro-body'] ?></p>              
+                  <h3><?php echo $data['week-8-learning-head'] ?></h3>
+                        <p><?php echo $data['week-8-learning-body'] ?></p>
                               <ol>
-                                    <li><?php echo $data['week-1-learning-objective-1'] ?></li>
-                                    <li><?php echo $data['week-1-learning-objective-2'] ?></li>
-                                    <li><?php echo $data['week-1-learning-objective-3'] ?></li>
-                                    <li><?php echo $data['week-1-learning-objective-4'] ?></li>
+                                    <li><?php echo $data['week-8-learning-objective-1'] ?></li>
+                                    <li><?php echo $data['week-8-learning-objective-2'] ?></li>
+
                               </ol>            
-                  <h3><?php echo $data['week-1-task-head'] ?></h3>
-                        <p><?php echo $data['week-1-task-body'] ?></p>
+                  <h3><?php echo $data['week-8-task-head'] ?></h3>
+                        <p><?php echo $data['week-8-task-body'] ?></p>
                               <ul>
-                                    <li><?php echo $data['week-1-task-1'] ?></li>
-                                    <li><?php echo $data['week-1-task-2'] ?></li>
-                                    <li><?php echo $data['week-1-task-3'] ?></li>
-                                    <li><?php echo $data['week-1-task-4'] ?></li>
-                                    <li><?php echo $data['week-1-task-5'] ?></li>
-                                    <li><?php echo $data['week-1-task-6'] ?></li>
-                                    <li><?php echo $data['week-1-task-7'] ?></li>
+                                    <li><?php echo $data['week-8-task-1'] ?></li>
+                                    <li><?php echo $data['week-8-task-2'] ?></li>
+                                    <li><?php echo $data['week-8-task-3'] ?></li>
+                                    <li><?php echo $data['week-8-task-4'] ?></li>
+
                               </ul>
             </div>
       </section>
@@ -1235,56 +1258,56 @@ add_shortcode('weekly_lesson_page_8','weekly_lesson_page_8');
 function weekly_lesson_page_9($atts) {
 	ob_start();
       $data = shortcode_atts(array(
-            'week-1-img' => '/wp-content/uploads/2022/11/Week-1.png',
+            'week-9-img' => '/wp-content/uploads/2022/11/Week-9.png',
 
-            'week-1-header' => "Week 1 - Overview",
-            'week-1-intro-header' => ' ',
-            'week-1-intro-body' => " ",
+            'week-9-header' => "Week 9 - Overview",
+            'week-9-intro-header' => 'PRESSPAUSEPLAY',
+            'week-9-intro-body' => "Optional Extra Credit due at the end of this week.",
 
-            'week-1-learning-head' => 'Weekly Learning Objectives',
-            'week-1-learning-body' => "After successful completion of this week, you will be able to:",
-            'week-1-learning-objective-1' => " ",
-            'week-1-learning-objective-2' => " ",
-            'week-1-learning-objective-3' => " ",
-            'week-1-learning-objective-4' => " ",
+            'week-9-learning-head' => 'Weekly Learning Objectives',
+            'week-9-learning-body' => "After successful completion of this week, you will be able to:",
+            'week-9-learning-objective-1' => " ",
+            'week-9-learning-objective-2' => " ",
+            'week-9-learning-objective-3' => " ",
+            'week-9-learning-objective-4' => " ",
 
-            'week-1-task-head' => "Task List",
-            'week-1-task-body' => "In order to achieve these learning outcomes, please make sure to complete the following in our Canvas LMS:",
-            'week-1-task-1' => "Work through the material on the Week 1 – Learning Content page.",
-            'week-1-task-2' => " ",
-            'week-1-task-3' => " ",
-            'week-1-task-4' => " ",
-            'week-1-task-5' => " ",
-            'week-1-task-6' => " ",
+            'week-9-task-head' => "Task List",
+            'week-9-task-body' => "In order to achieve these learning outcomes, please make sure to complete the following in our Canvas LMS:",
+            'week-9-task-1' => "Work through the material on the Week 9 – Learning Content page.",
+            'week-9-task-2' => "Comment on two classmates' posts in the Peer Review Discussion: 3-Dimensional Forms.",
+            'week-9-task-3' => "Participate in the Discussion: Found Text.",
+            'week-9-task-4' => "Complete the Week 9 - Homework + Quiz.",
+            'week-9-task-5' => "Begin working on Project 4 – Artist Zine.",
+            'week-9-task-6' => "Optional Assignment: Extra Credit.",
 	),$atts);
 	?>
 <div class="page">
       <section class="row">
             <div class="page-image">
-                  <img id="week-1-img"  src="<?php echo $data['week-1-img'] ?> " alt="">
+                  <img id="week-9-img"  src="<?php echo $data['week-9-img'] ?> " alt="">
             </div>
             <div class="page-text">
-                  <h1><?php echo $data['week-1-header'] ?></h1><br>
-                        <h2><?php echo $data['week-1-intro-header'] ?></h2>
-                              <p><?php echo $data['week-1-intro-body'] ?></p>              
-                  <h3><?php echo $data['week-1-learning-head'] ?></h3>
-                        <p><?php echo $data['week-1-learning-body'] ?></p>
+                  <h1><?php echo $data['week-9-header'] ?></h1><br>
+                        <h2><?php echo $data['week-9-intro-header'] ?></h2>
+                              <p><?php echo $data['week-9-intro-body'] ?></p>              
+                  <h3><?php echo $data['week-9-learning-head'] ?></h3>
+                        <p><?php echo $data['week-9-learning-body'] ?></p>
                               <ol>
-                                    <li><?php echo $data['week-1-learning-objective-1'] ?></li>
-                                    <li><?php echo $data['week-1-learning-objective-2'] ?></li>
-                                    <li><?php echo $data['week-1-learning-objective-3'] ?></li>
-                                    <li><?php echo $data['week-1-learning-objective-4'] ?></li>
+                                    <li><?php echo $data['week-9-learning-objective-1'] ?></li>
+                                    <li><?php echo $data['week-9-learning-objective-2'] ?></li>
+                                    <li><?php echo $data['week-9-learning-objective-3'] ?></li>
+                                    <li><?php echo $data['week-9-learning-objective-4'] ?></li>
                               </ol>            
-                  <h3><?php echo $data['week-1-task-head'] ?></h3>
-                        <p><?php echo $data['week-1-task-body'] ?></p>
+                  <h3><?php echo $data['week-9-task-head'] ?></h3>
+                        <p><?php echo $data['week-9-task-body'] ?></p>
                               <ul>
-                                    <li><?php echo $data['week-1-task-1'] ?></li>
-                                    <li><?php echo $data['week-1-task-2'] ?></li>
-                                    <li><?php echo $data['week-1-task-3'] ?></li>
-                                    <li><?php echo $data['week-1-task-4'] ?></li>
-                                    <li><?php echo $data['week-1-task-5'] ?></li>
-                                    <li><?php echo $data['week-1-task-6'] ?></li>
-                                    <li><?php echo $data['week-1-task-7'] ?></li>
+                                    <li><?php echo $data['week-9-task-1'] ?></li>
+                                    <li><?php echo $data['week-9-task-2'] ?></li>
+                                    <li><?php echo $data['week-9-task-3'] ?></li>
+                                    <li><?php echo $data['week-9-task-4'] ?></li>
+                                    <li><?php echo $data['week-9-task-5'] ?></li>
+                                    <li><?php echo $data['week-9-task-6'] ?></li>
+
                               </ul>
             </div>
       </section>
@@ -1423,3 +1446,69 @@ function weekly_lesson_page_11($atts) {
 	return ob_get_clean();
 }
 add_shortcode('weekly_lesson_page_11','weekly_lesson_page_11');
+
+
+
+function projects_overview($atts) {
+	ob_start();
+	$data = shortcode_atts(array(
+            'headline' => "4 Major Projects",
+            'projects_intro' => "Cumulatively worth 80% of course grade",
+            
+            'project_1_img' => '/wp-content/uploads/2022/11/Project_1.png',
+		'project_1_headline' => "Project 1 - Culture Jam",
+		'project_1_motivation' => "Culture jamming is a tactic used by many anti-consumerist activists whereby existing corporate media such as logos, billboards, bus-ads, posters, commercials, and other advertisements are disrupted, subverted, and re-configured to produce ironic or satirical commentary about the corporation or product itself, commonly using the original medium's communication method.", 
+
+            'project_2_img' => '/wp-content/uploads/2022/11/Project_2.gif',
+		'project_2_headline' => "Project 2 - Video Remix",
+		'project_2_motivation' => "Artists consistently challenge the idea that meaning ascribed to objects is permanently fixed. In today’s digital world it’s easier than ever to copy, paste, mash-up, remix, download and publish content. Other people’s writing, artwork, images and videos can be inspiring, but they’re also easy to take without thinking twice or with any regard to critical consideration or the weight of their cultural content.", 
+
+            'project_3_img' => '/wp-content/uploads/2022/11/Project_3.gif',
+		'project_3_headline' => "Project 3 - 3 Dimensional Forms",
+		'project_3_motivation' => "The domestic setting has been a crucial site (and recurring subject) of artistic production—a parallel track and occasionally a counterpoint to more commonly celebrated contexts such as the artist’s studio and the public sphere. In fact, many artists, for personal or financial reasons, work at home, and for those artists, the home often becomes the subject and source of their artwork.", 
+
+            'project_4_img' => '/wp-content/uploads/2022/11/Project_4.gif',
+		'project_4_headline' => "Project 4 - Artist Zine",
+		'project_4_motivation' => "A zine (\ˈzēn\ ZEEN; an abbreviation of fanzine or magazine) is a cheaply-made, cheaply-priced, small circulation self-published printed and bound (usually with staples) book form work of original or appropriated texts and images often in black and white and usually reproduced via photocopier. Zines are noncommercial often homemade or online publications usually devoted to specialized and often unconventional subject matter.", 
+
+
+	),$atts);
+	?>
+	<div class="projects-overview-main-container">
+
+            <div id="projects-intro-container">
+                  <h1 id="projects-overview-text"><b><?php echo $data['headline'] ?></b></h1>
+                  <h3 id="projects-overview-text"><i><?php echo $data['projects_intro'] ?></i></h3>
+            </div>
+            
+            <div id="projects-overview-intro-container">      
+                  <a href='/assignments/projects/project-1' class="project-card"><img id="projects-overview-image" src="<?php echo $data['project_1_img'] ?>" alt="">
+                        <h3 id="projects-overview-text"><?php echo $data['project_1_headline'] ?></h3>
+                        <p id="projects-overview-text"><?php echo $data['project_1_motivation'] ?></p>
+                        <p id="projects-overview-text">Click to learn more about this project</p>
+                  </a>
+            
+                  <a href='/assignments/projects/project-2' class="project-card"><img id="projects-overview-image" src="<?php echo $data['project_2_img'] ?>" alt="">
+                        <h3 id="projects-overview-text"><?php echo $data['project_2_headline'] ?></h3>
+                        <p id="projects-overview-text"><?php echo $data['project_2_motivation'] ?></p>
+                        <p id="projects-overview-text">Click to learn more about this project</p>
+                  </a>
+
+                  <a href='/assignments/projects/project-3' class="project-card"><img id="projects-overview-image" src="<?php echo $data['project_3_img'] ?>" alt="">
+                        <h3 id="projects-overview-text"><?php echo $data['project_3_headline'] ?></h3>
+                        <p id="projects-overview-text"><?php echo $data['project_3_motivation'] ?></p>
+                        <p id="projects-overview-text">Click to learn more about this project</p>
+                  </a>
+
+                  <a href='/assignments/projects/project-4' class="project-card"><img id="projects-overview-image" src="<?php echo $data['project_4_img'] ?>" alt="">
+                        <h3 id="projects-overview-text"><?php echo $data['project_4_headline'] ?></h3>
+                        <p id="projects-overview-text"><?php echo $data['project_4_motivation'] ?></p>
+                        <p id="projects-overview-text">Click to learn more about this project</p>
+                  </a>
+            </div>
+      
+      </div>
+	<?php
+	return ob_get_clean();
+}
+add_shortcode('projects_overview','projects_overview');

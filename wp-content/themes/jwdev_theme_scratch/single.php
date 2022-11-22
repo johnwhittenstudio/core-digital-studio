@@ -1,6 +1,6 @@
 <?php get_header();?>
 
-<section class="page-wrap">
+<!-- <section class="page-wrap"> -->
 <div class="single-page-container">
       <div class="single-page-card">
 
@@ -37,7 +37,7 @@
             <?php next_post_link(); ?>
       </div>
 </div>
-</section>
+<!-- </section> -->
 
 
 <?php get_footer();?>
