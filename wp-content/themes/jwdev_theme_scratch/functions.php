@@ -1512,3 +1512,268 @@ function projects_overview($atts) {
 	return ob_get_clean();
 }
 add_shortcode('projects_overview','projects_overview');
+
+
+function project_one($atts) {
+	ob_start();
+	$data = shortcode_atts(array(
+            'headline' => "Project 1 - Culture Jam",
+            'projects_intro' => "Worth 25 points / 20% of course grade",
+            
+            'project_1_img' => '/wp-content/uploads/2022/11/Project_1.png',
+
+            'project_1_motivation_headline' => "MOTIVATION",
+		'project_1_motivation' => "Culture jamming is a tactic used by many anti-consumerist activists whereby existing corporate media such as logos, billboards, bus-ads, posters, commercials, and other advertisements are disrupted, subverted, and re-configured to produce ironic or satirical commentary about the corporation or product itself, commonly using the original medium's communication method.", 
+
+            'project_1_deadline' => "Due WEDNESDAY of Week 3 by 11:59pm PST",
+
+            'project_1_instructions_headline' => "INSTRUCTIONS",
+            'project_1_instructions_text' => "For this project you will generate and execute a Culture Jam using Adobe Photoshop that fits within the parameters listed in the links below.",
+            'project_1_guidelines' => 'https://docs.google.com/document/d/1AMkazUb1FnsSMPo_Ms4GP9caZhTNH0IY0oP4PeM98tg/edit?usp=sharing',
+            'grading_ribric' => 'https://docs.google.com/document/d/1agaebIl0luT2UdwWRvMPm8YVYnNr1CgJeayTDQ0xMV0/edit?usp=sharing',
+
+            'project_1_important_headline' => "IMPORTANT",
+            'project_1_review_text' => "After following the instructions for the Project 1 - Culture Jam Guidelines and submitting your finished work (PSD only) on the Canvas Assignment page, you must also embed your finished image (JPEG only) to the Peer Review Discussion: Culture Jam and comment on at least two classmates' work to complete this Project.",
+
+            'project_1_examples_headline' => "PAST STUDENT EXAMPLES",
+            'project_1_student_examples' => 'https://drive.google.com/drive/folders/10vuraKpa2KXKPHrf3-kEP3zbj0HINe4n?usp=sharing',
+
+
+	),$atts);
+	?>
+	<div class="project-main-container">
+
+            <div id="project-intro-container">
+                  <h1 id="project-text"><b><?php echo $data['headline'] ?></b></h1>
+                  <h3 id="project-text"><i><?php echo $data['projects_intro'] ?></i></h3>
+            </div>
+            <div id="project-text-container">
+                  <div class="project-left">
+                        <img id="project-img"  src="<?php echo $data['project_1_img'] ?> " alt="">
+                  </div>
+
+                  <div class="project-right">
+                        <h4 id="project-text"><b><?php echo $data['project_1_motivation_headline'] ?></b></h4>
+                        <p id="project-text"><?php echo $data['project_1_motivation'] ?> </p>
+                        <h5 id="project-text"><b><?php echo $data['project_1_deadline'] ?></b></h5>
+                        <hr></hr>
+                        <h4 id="project-text"><b><?php echo $data['project_1_instructions_headline'] ?></b></h4>
+                        <p id="project-text"><?php echo $data['project_1_instructions_text'] ?></p>
+                        <ul>
+                              <li><a href=<?php echo $data['project_1_guidelines'] ?> target="_blank" rel="noopener">Project 1 - Culture Jam Guidelines</a></li>
+                              <li><a href=<?php echo $data['grading_rubric'] ?> target="_blank" rel="noopener">Major Project - Grading Rubric</a></li>
+                        </ul>
+                        <hr></hr>
+                        <h4 id="project-text"><b><?php echo $data['project_1_important_headline'] ?></b></h4>
+                        <p id="project-text"><?php echo $data['project_1_review_text'] ?></p>
+                        <hr></hr>
+                        <h4 id="project-text"><b><?php echo $data['project_1_examples_headline'] ?></b></h4>
+                        <a href=<?php echo $data['project_1_student_examples'] ?> target="_blank" rel="noopener">Project 1 - Culture Jam Student Examples</a>
+                  </div>
+
+            </div>
+      
+      </div>
+	<?php
+	return ob_get_clean();
+}
+add_shortcode('project_one','project_one');
+
+
+function project_two($atts) {
+	ob_start();
+	$data = shortcode_atts(array(
+            'headline' => "Project 2 - Video Remix",
+            'projects_intro' => "Worth 25 points / 20% of course grade",
+            
+            'project_2_img' => '/wp-content/uploads/2022/11/Project_2.gif',
+
+            'project_2_motivation_headline' => "MOTIVATION",
+		'project_2_motivation' => "From the ideas of Duchamp and the ready-made, the use of found footage has been part of the video medium since its inception. Artists consistently challenge the idea that meaning ascribed to objects is permanently fixed. In today’s digital world it’s easier than ever to copy, paste, mash-up, remix, download and publish content. Other people’s writing, artwork, images and videos can be inspiring, but they’re also easy to take without thinking twice or with any regard to critical consideration or the weight of their cultural content.", 
+
+            'project_2_deadline' => "Due WEDNESDAY of Week 6 by 11:59pm PST",
+
+            'project_2_instructions_headline' => "INSTRUCTIONS",
+            'project_2_instructions_text' => "For this project you will generate and execute a Video Remix using Adobe Premiere that fits within the parameters listed in the links below.",
+            'project_2_guidelines' => 'https://docs.google.com/document/d/1Zxf5c5XMmLOomlpn6yIlbwZLFJ19CECO4FvwVCDlZks/edit?usp=sharing',
+            'grading_rubric' => 'https://docs.google.com/document/d/1agaebIl0luT2UdwWRvMPm8YVYnNr1CgJeayTDQ0xMV0/edit?usp=sharing',
+
+            'project_2_important_headline' => "IMPORTANT",
+            'project_2_review_text' => "After following the instructions for the Project 2 - Video Remix and submitting your finished work on the Canvas Assignment page, you must also post your finished video (.mov, .mpeg, .mp4) to the Peer Review Discussion: Video Remix to complete this Project.",
+
+            'project_2_examples_headline' => "PAST STUDENT EXAMPLES",
+            'project_2_student_examples' => 'https://drive.google.com/drive/folders/15otXctIPORioDcbsfKbaaqywrOSPHi0J?usp=sharing',
+
+
+	),$atts);
+	?>
+	<div class="project-main-container">
+
+            <div id="project-intro-container">
+                  <h1 id="project-text"><b><?php echo $data['headline'] ?></b></h1>
+                  <h3 id="project-text"><i><?php echo $data['projects_intro'] ?></i></h3>
+            </div>
+            <div id="project-text-container">
+                  <div class="project-left">
+                        <img id="project-img"  src="<?php echo $data['project_2_img'] ?> " alt="">
+                  </div>
+
+                  <div class="project-right">
+                        <h4 id="project-text"><b><?php echo $data['project_2_motivation_headline'] ?></b></h4>
+                        <p id="project-text"><?php echo $data['project_2_motivation'] ?> </p>
+                        <h5 id="project-text"><b><?php echo $data['project_2_deadline'] ?></b></h5>
+                        <hr></hr>
+                        <h4 id="project-text"><b><?php echo $data['project_2_instructions_headline'] ?></b></h4>
+                        <p id="project-text"><?php echo $data['project_2_instructions_text'] ?></p>
+                        <ul>
+                              <li><a href=<?php echo $data['project_2_guidelines'] ?> target="_blank" rel="noopener">Project 2 - Video Remix Guidelines</a></li>
+                              <li><a href=<?php echo $data['grading_rubric'] ?> target="_blank" rel="noopener">Major Project - Grading Rubric</a></li>
+                        </ul>
+                        <hr></hr>
+                        <h4 id="project-text"><b><?php echo $data['project_2_important_headline'] ?></b></h4>
+                        <p id="project-text"><?php echo $data['project_2_review_text'] ?></p>
+                        <hr></hr>
+                        <h4 id="project-text"><b><?php echo $data['project_2_examples_headline'] ?></b></h4>
+                        <a href=<?php echo $data['project_2_student_examples'] ?> target="_blank" rel="noopener">Project 2 - Video Remix Student Examples</a>
+                  </div>
+
+            </div>
+      
+      </div>
+	<?php
+	return ob_get_clean();
+}
+add_shortcode('project_two','project_two');
+
+
+function project_three($atts) {
+	ob_start();
+	$data = shortcode_atts(array(
+            'headline' => "Project 3 - 3-Dimensional Forms",
+            'projects_intro' => "Worth 25 points / 20% of course grade",
+            
+            'project_3_img' => '/wp-content/uploads/2022/11/Project_3.gif',
+
+            'project_3_motivation_headline' => "MOTIVATION",
+		'project_3_motivation' => "The domestic setting has been a crucial site (and recurring subject) of artistic production—a parallel track and occasionally a counterpoint to more commonly celebrated contexts such as the artist’s studio and the public sphere. In fact, many artists, for personal or financial reasons, work at home, and for those artists, the home often becomes the subject and source of their artwork.", 
+
+            'project_3_deadline' => "Due SATURDAY of Week 8 by 11:59pm PST",
+
+            'project_3_instructions_headline' => "INSTRUCTIONS",
+            'project_3_instructions_text' => "For this project, you will generate a 3D digital rendering of 'home' using SketchUp Pro. You may use either the Free 30-day Trial of SketchUp Pro Desktop app or the Free SketchUp Web-based application Links to an external site. Use the parameters listed in the instructions through the links below.",
+            'project_3_guidelines' => 'https://docs.google.com/document/d/1FGZmXwXlh7Ji3oMf29wQOLFMfhZvqWWrne8yu908KP0/edit?usp=sharing',
+            'grading_rubric' => 'https://docs.google.com/document/d/1agaebIl0luT2UdwWRvMPm8YVYnNr1CgJeayTDQ0xMV0/edit?usp=sharing',
+
+            'project_3_important_headline' => "IMPORTANT",
+            'project_3_review_text' => "After following the instructions for Project 3 - 3-Dimensional Forms and submitting your finished work on the Canvas Assignment page, you must also post your finished video or animated GIF to the Peer Review Discussion: 3-Dimensional Forms to complete this Project.",
+
+            'project_3_examples_headline' => "PAST STUDENT EXAMPLES",
+            'project_3_student_examples' => 'https://drive.google.com/drive/folders/18Yp1NHltrijMQBuNCYXBgXSVe_AvPgkh?usp=sharing',
+
+
+	),$atts);
+	?>
+	<div class="project-main-container">
+
+            <div id="project-intro-container">
+                  <h1 id="project-text"><b><?php echo $data['headline'] ?></b></h1>
+                  <h3 id="project-text"><i><?php echo $data['projects_intro'] ?></i></h3>
+            </div>
+            <div id="project-text-container">
+                  <div class="project-left">
+                        <img id="project-img"  src="<?php echo $data['project_3_img'] ?> " alt="">
+                  </div>
+
+                  <div class="project-right">
+                        <h4 id="project-text"><b><?php echo $data['project_3_motivation_headline'] ?></b></h4>
+                        <p id="project-text"><?php echo $data['project_3_motivation'] ?> </p>
+                        <h5 id="project-text"><b><?php echo $data['project_3_deadline'] ?></b></h5>
+                        <hr></hr>
+                        <h4 id="project-text"><b><?php echo $data['project_3_instructions_headline'] ?></b></h4>
+                        <p id="project-text"><?php echo $data['project_3_instructions_text'] ?></p>
+                        <ul>
+                              <li><a href=<?php echo $data['project_3_guidelines'] ?> target="_blank" rel="noopener">Project 3 - 3-Dimensional Forms Guidelines</a></li>
+                              <li><a href=<?php echo $data['grading_rubric'] ?> target="_blank" rel="noopener">Major Project - Grading Rubric</a></li>
+                        </ul>
+                        <hr></hr>
+                        <h4 id="project-text"><b><?php echo $data['project_3_important_headline'] ?></b></h4>
+                        <p id="project-text"><?php echo $data['project_3_review_text'] ?></p>
+                        <hr></hr>
+                        <h4 id="project-text"><b><?php echo $data['project_3_examples_headline'] ?></b></h4>
+                        <a href=<?php echo $data['project_3_student_examples'] ?> target="_blank" rel="noopener">Project 3 - 3-Dimensional Forms Student Examples</a>
+                  </div>
+
+            </div>
+      
+      </div>
+	<?php
+	return ob_get_clean();
+}
+add_shortcode('project_three','project_three');
+
+
+
+function project_four($atts) {
+	ob_start();
+	$data = shortcode_atts(array(
+            'headline' => "Project 4 - Artist Zine",
+            'projects_intro' => "Worth 25 points / 20% of course grade",
+            
+            'project_4_img' => '/wp-content/uploads/2022/11/Project_4.gif',
+
+            'project_4_motivation_headline' => "MOTIVATION",
+		'project_4_motivation' => "A zine (\ˈzēn\ ZEEN; an abbreviation of fanzine or magazine) is a cheaply-made, cheaply-priced, small circulation self-published printed and bound (usually with staples) book form work of original or appropriated texts and images often in black and white and usually reproduced via photocopier. A popular definition includes that circulation must be 1,000 or fewer, although in practice the majority are produced in editions of fewer than 100, and profit is not the primary intent of publication. Zines are noncommercial often homemade or online publication usually devoted to specialized and often unconventional subject matter.", 
+
+            'project_4_deadline' => "Due WEDNESDAY of Week 11 by 11:59pm PST",
+
+            'project_4_instructions_headline' => "INSTRUCTIONS",
+            'project_4_instructions_text' => "For this project you will create a Zine using Adobe InDesign following the parameters listed in the instructions through the links below.",
+            'project_4_guidelines' => 'https://docs.google.com/document/d/1SbTL6LNJUu_XuvMPduEOpCLZKzi0mwXqv3Q4bN_9V00/edit?usp=sharing',
+            'grading_rubric' => 'https://docs.google.com/document/d/1agaebIl0luT2UdwWRvMPm8YVYnNr1CgJeayTDQ0xMV0/edit?usp=sharing',
+
+            'project_4_important_headline' => "IMPORTANT",
+            'project_4_review_text' => "After following the instructions for Project 4 - Artist Zine and submitting your finished work to the Canvas Assignment page, you must also post your finished Zine (PDF only) to the Share Your Artist Zine With Your Classmates to complete this Project. No Peer Review will take place for this project.",
+
+            'project_4_examples_headline' => "PAST STUDENT EXAMPLES",
+            'project_4_student_examples' => 'https://drive.google.com/drive/folders/1HAxTwvheFgLwefpzK9HdNqSgn4RRoZu1?usp=sharing',
+
+
+	),$atts);
+	?>
+	<div class="project-main-container">
+
+            <div id="project-intro-container">
+                  <h1 id="project-text"><b><?php echo $data['headline'] ?></b></h1>
+                  <h3 id="project-text"><i><?php echo $data['projects_intro'] ?></i></h3>
+            </div>
+            <div id="project-text-container">
+                  <div class="project-left">
+                        <img id="project-img"  src="<?php echo $data['project_4_img'] ?> " alt="">
+                  </div>
+
+                  <div class="project-right">
+                        <h4 id="project-text"><b><?php echo $data['project_4_motivation_headline'] ?></b></h4>
+                        <p id="project-text"><?php echo $data['project_4_motivation'] ?> </p>
+                        <h5 id="project-text"><b><?php echo $data['project_4_deadline'] ?></b></h5>
+                        <hr></hr>
+                        <h4 id="project-text"><b><?php echo $data['project_4_instructions_headline'] ?></b></h4>
+                        <p id="project-text"><?php echo $data['project_4_instructions_text'] ?></p>
+                        <ul>
+                              <li><a href=<?php echo $data['project_4_guidelines'] ?> target="_blank" rel="noopener">Project 4 - Artist Zine Guidelines</a></li>
+                              <li><a href=<?php echo $data['grading_rubric'] ?> target="_blank" rel="noopener">Major Project - Grading Rubric</a></li>
+                        </ul>
+                        <hr></hr>
+                        <h4 id="project-text"><b><?php echo $data['project_4_important_headline'] ?></b></h4>
+                        <p id="project-text"><?php echo $data['project_4_review_text'] ?></p>
+                        <hr></hr>
+                        <h4 id="project-text"><b><?php echo $data['project_4_examples_headline'] ?></b></h4>
+                        <a href=<?php echo $data['project_3_student_examples'] ?> target="_blank" rel="noopener">Project 4 - Artist Zine Student Examples</a>
+                  </div>
+
+            </div>
+      
+      </div>
+	<?php
+	return ob_get_clean();
+}
+add_shortcode('project_four','project_four');
