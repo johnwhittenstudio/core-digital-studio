@@ -142,7 +142,7 @@ header .top-bar .sub-menu li .sub-menu {
 
 .page {
   width: 100vw;
-  display: flex;
+  /* display: flex; */
   flex-direction: row;
   background: linear-gradient(#f1fffe, white, #f1fffe);
 }
@@ -2689,7 +2689,16 @@ body:not(.home) #copyright-text {
 .btn {
   color: white;
   text-shadow: #213a52 2px 2px;
-  background: #1c97d0;
+  /* background: #1c97d0; */
+  background: 
+    linear-gradient(to right,
+      #135b79,
+      #061d27,
+      #061d27,
+      /* #8b458a, */
+      /* #407789, */
+      #135b79);
+
   transition: transform .4s ease;
   width: 250px;
   height: 100px;
@@ -2703,11 +2712,16 @@ body:not(.home) #copyright-text {
   align-items: center;
 }
 
+
 .overview-button-container a:hover {
-  background: #213a52;
+  background: 
+  linear-gradient(to right,
+    #fb7cf9,  
+    #2199cc,
+    #fb7cf9);
   color: white;
   /* text-shadow: #1c97d0 2px 2px; */
-  transition: transform .4s ease;
+  transition: .5s ease;
 }
 
 #technical_header {
@@ -2763,7 +2777,7 @@ body:not(.home) #copyright-text {
 }
 
 .project-card {
-  width: 800px;
+  max-width: 800px;
   height: 100%;
   margin: 25px 15px;
   border: solid 4px #013f50;
@@ -2779,8 +2793,8 @@ body:not(.home) #copyright-text {
 
 #projects-overview-image {
   width: 90%;
-  height: 350px;
-  margin: 30px;
+  height: 25rem;
+  margin: 3% 5%;
 }
 
 #projects-overview-text {
@@ -2810,10 +2824,10 @@ body:not(.home) #copyright-text {
 }
 
 #project-text-container {
-  width: 90%;
+  width: 80%;
   display: flex;
   flex-direction: row;
-  margin-left: 5%;
+  margin: 0 auto;
 }
 
 .project-left {
@@ -2823,7 +2837,7 @@ body:not(.home) #copyright-text {
 }
 
 #project-img {
-  width: 650px;
+  width: 40em;
 }
 
 .project-right {
@@ -2854,15 +2868,198 @@ body:not(.home) #copyright-text {
 
 
 
-@media screen and (min-width: 1300px) {
 
-  .menu-item-has-children:hover .sub-menu {
-    display: block;
-    left: 0;
-    margin: 0 0 0 0 !important;
-  }
+
+
+
+/*--------------------------------------------------------------
+## Appointment - JW
+--------------------------------------------------------------*/
+
+
+
+.appointment-parent-container{
+  width: 100vw;
+  min-height: 100%;
+  display: flex;
+  padding-top: 3%;
+  margin-bottom: 0 !important;
+}
+
+.appointment-child-container{
+  width: 100%;
+  min-height: 100%;
+  /* background-color: black; */
+  display: flex;
+  flex-direction: row;
+}
+
+#page-region{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.appointment-text {
+  width: 45%;
+  margin: 8% 0 0% 8%;
+}
+
+#appointment-hr {
+  width: 580px;
+  border: 2px solid #fb7cf9;
+}
+
+#appointment-instructions {
+  margin: 2% 0 5% 0;
+}
+
+.appointment-text h5 {
+  text-transform: none;
+  margin: 25px 0;
+  width: 90%;
+}
+
+
+.appointment-text h5 a{
+  text-decoration: none;
+  color: #213a51;
+  font-weight: 800;
+}
+
+.appointment-text h5 a:hover {
+  color: #1c97d0;
+}
+
+#appointment-email {
+  text-transform: uppercase;
+}
+
+.appointment-calendly {
+  width: 50%;
+  margin: 3% 3% 0 3%;
+}
+
+.calendly-inline-widget{
+  width: 620px;
+  height: 900px;
+}
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+## Services - JW
+--------------------------------------------------------------*/
+
+
+.services-parent-container{
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  padding-top: 5%;
+  margin-bottom: 0 !important;
+}
+
+.services-child-container{
+  width: 85%;
+  margin-left: 8%;
+}
+
+#services-text {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-transform: none;
+  color: #213a51 !important;
+  margin-bottom: 3%;
+  
+}
+
+.services {
+  width: 100%;
+  margin: 3% 5%;
 
 }
+
+#services-headline {
+  margin-top: 45px;
+}
+
+.services-card {
+  width: 90%;
+  border: 2px solid #fb7cf9;
+  background-color: #23b6fb23;
+  padding: 15px;
+}
+
+.services-card-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#services-phone-icon {
+  max-width: 30px;
+  margin-left: 8px;
+}
+
+#services-phone {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-transform: none;
+  color: #213a51 !important;
+  padding: 15px 0 0 20px;
+}
+
+#services-web-icon {
+  max-width: 45px;
+}
+
+#services-web {
+  width: 90%;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-transform: none;
+  color: #213a51 !important;
+  padding: 15px 0 0 15px;
+}
+
+#services-web a {
+  color: #213a51 !important;
+}
+
+#services-web-crisis a:hover {
+  color: #fb7cf9 !important;
+}
+
+#services-description{
+  width: 95%;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-transform: none;
+  color: #213a51 !important;
+  padding: 15px 0 0 10px;
+}
+
+
+
+
+
+
+/*--------------------------------------------------------------
+## Policies - JW
+--------------------------------------------------------------*/
+
+
+
+
 
 
 
@@ -2874,6 +3071,8 @@ body:not(.home) #copyright-text {
 /* @media screen and (max-width: ) {
 
 } */
+
+
 
 @media screen and (max-width: 1440px) {
 
@@ -2930,7 +3129,16 @@ body:not(.home) #copyright-text {
     /* margin-left: 10%; */
   }
 
+
+  /* .appointment-calendly {
+    margin-left: 25%;
+  } */
+
+
+
 }
+
+
 
 @media screen and (max-width: 1370px) {
 
@@ -2946,6 +3154,55 @@ body:not(.home) #copyright-text {
   /* height: 50px; */
   }
 
+
+
+  .appointment-child-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  
+  .appointment-text {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  #appointment-instructions {
+    width: 600px;
+    margin: 0 auto;
+    padding-bottom: 5%;
+  }
+
+  #appointment-issues {
+    width: 600px;
+    margin: 0 auto;
+    padding-bottom: 5%;
+  }
+
+  #appointment-email {
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  .appointment-calendly {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .calendly-inline-widget{
+    width: 650px;
+    margin: 0 auto;
+  }
+
+
+
+
 }
 
 /* #header-nav-jw-bottom-banner {
@@ -2958,6 +3215,21 @@ body:not(.home) #copyright-text {
   justify-content: center;
   align-items: center;
 } */
+
+
+
+
+
+
+@media screen and (min-width: 1300px) {
+
+  .menu-item-has-children:hover .sub-menu {
+    display: block;
+    left: 0;
+    margin: 0 0 0 0 !important;
+  }
+
+}
 
 
 @media screen and (max-width: 1300px) {

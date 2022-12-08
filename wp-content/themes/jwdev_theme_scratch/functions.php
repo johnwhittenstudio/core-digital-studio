@@ -1777,3 +1777,315 @@ function project_four($atts) {
 	return ob_get_clean();
 }
 add_shortcode('project_four','project_four');
+
+
+function appointment() {
+      ob_start();
+	$data = shortcode_atts(array(
+            'headline' => "Book an appoinment during office hours",
+            'instructions' => "Select a date on the calendar to begin booking an appointment.",
+            'issues' => "If you experience any technical issues booking an appointment, please reach out to John directly via email.",
+            'email' => "johnwhitten.studio@gmail.com",
+	),$atts);
+	?>
+	<div class="appointment-parent-container">
+
+            <div class="appointment-headline">
+            </div>
+            <div class="appointment-child-container">
+                  <div class="appointment-text">
+                              
+                              <h4 id="appointment-headline"><b><?php echo $data['headline'] ?></b></h4>
+                              <hr id="appointment-hr"></hr>
+                              <br>
+                              <h5 id="appointment-instructions"><?php echo $data['instructions'] ?></h5>
+                              <h5 id="appointment-issues"><?php echo $data['issues'] ?></h5>
+                              <h5 id="appointment-email"><a href="mailto:johnwhitten.studio@gmail.com"><?php echo $data['email'] ?></a></h5>
+                  </div>
+
+                  <div class="appointment-calendly">
+                        <!-- Calendly inline widget begin -->
+                        <div class="calendly-inline-widget" data-url="https://calendly.com/johnwhitten-studio/20min?primary_color=1c97d0"></div>
+                        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                        <!-- Calendly inline widget end -->
+                  </div>
+
+            </div>
+      
+      </div>
+	<?php
+	return ob_get_clean();
+}
+add_shortcode('appointment','appointment');
+
+
+
+
+function policies() {
+      ob_start();
+	$data = shortcode_atts(array(
+            'headline' => "Book an appoinment during office hours",
+            'instructions' => "Select a date on the calendar to begin booking an appointment.",
+            'issues' => "If you experience any technical issues booking an appointment, please reach out to John directly via email.",
+            'email' => "johnwhitten.studio@gmail.com",
+	),$atts);
+	?>
+	<div class="appointment-parent-container">
+
+            <div class="appointment-headline">
+            </div>
+            <div class="appointment-child-container">
+                  <div class="appointment-text">
+                              
+                              <h4 id="appointment-headline"><b><?php echo $data['headline'] ?></b></h4>
+                              <hr id="appointment-hr"></hr>
+                              <br>
+                              <h5 id="appointment-instructions"><?php echo $data['instructions'] ?></h5>
+                              <h5 id="appointment-issues"><?php echo $data['issues'] ?></h5>
+                              <h5 id="appointment-email"><a href="mailto:johnwhitten.studio@gmail.com"><?php echo $data['email'] ?></a></h5>
+                  </div>
+
+                  <div class="appointment-calendly">
+                        <!-- Calendly inline widget begin -->
+                        <div class="calendly-inline-widget" data-url="https://calendly.com/johnwhitten-studio/20min?primary_color=1c97d0"></div>
+                        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                        <!-- Calendly inline widget end -->
+                  </div>
+
+            </div>
+      
+      </div>
+	<?php
+	return ob_get_clean();
+}
+add_shortcode('policies','policies');
+
+
+
+
+function services() {
+      ob_start();
+	$data = shortcode_atts(array(
+            'services-text' => "From crisis support to academic coaching to recreational programming, there are loads of support services and opportunities to engage at OSU. Please review the provided websites or contact departments and offices directly for questions regarding services.",
+            'phone' => "/wp-content/uploads/2022/12/phone.png",
+            'web' => "/wp-content/uploads/2022/12/web.png",
+
+            'services-headline-crisis' => "24-Hour Crisis Hotline and Services",
+            'services-phone-crisis' => "1-800-273-8255",
+            'services-web-crisis' => "http://www.ulifeline.org/get_help_now",
+            'services-description-crisis' => "If you are considering suicide or feeling depressed, talk to someone. Reach out to a friend or family member, call or stop by CAPS, contact the 24-hour crisis hotline or visit the CAPS website for multiple resources.",
+
+            'services-headline-asc' => "Academic Success Center (ASC)",
+            'services-phone-asc' => "541-737-2272",
+            'services-web-asc' => "https://success.oregonstate.edu/",
+            'services-description-asc' => "The Academic Success Center (ASC) provides support and services to help all students achieve their academic goals. ASC programs help students develop learning strategies and time management skills to excel in their coursework and stay on track to graduate.",
+
+            'services-headline-athlete' => "Academics for Student Athletes",
+            'services-phone-athlete' => "541-737-1000",
+            'services-web-athlete' => "https://studentathlete.oregonstate.edu/",
+            'services-description-athlete' => "The Academics for Student Athletes office provides academic and personal support to all student athletes at Oregon State University. We strive to create a collaborative environment with other campus departments that will help you achieve your potential for intellectual, social and personal development. Services include sport-specific academic counselors and priority class registration for student athletes, with guidance and advising from major department advisors as well as ASA academic counselors.",
+
+            'services-headline-nurse' => "After-Hours Medical Advice Nurse Line",
+            'services-phone-nurse' => "541-737-9355",
+            'services-web-nurse' => "https://studenthealth.oregonstate.edu/clinical-services/medical-advice-nurse-line",
+            'services-description-nurse' => "Medical advice is available by phone 24 hours per day for OSU students eligible for care at Student Health Services. If you have medical concerns after clinic hours, you can obtain a toll-free number for a medical call center by calling 541-737-9355.",
+
+            'services-headline-apcc' => "Asian & Pacific Cultural Center",
+            'services-phone-apcc' => "541-737-6361",
+            'services-web-apcc' => "https://dce.oregonstate.edu/apcc",
+            'services-description-apcc' => "Celebrating the cultures of Asian and Pacific Island nations, the Asian & Pacific Cultural Center provides a meditation room, engagement opportunities, and space for students to mingle and experience community.",
+
+            'services-headline-bnc' => "Basic Needs Center",
+            'services-phone-bnc' => "541-737-3747",
+            'services-web-bnc' => "https://studentlife.oregonstate.edu/bnc",
+            'services-description-bnc' => "The Basic Needs Center is here to support you. We provide textbook access, laptop and calculator lending and food assistance. Contact the center for peer support to help you identify and apply to resources.",
+
+            'services-headline-birf' => "Bias Incident Report Form",
+            'services-phone-birf' => "541-737-1063",
+            'services-web-birf' => "https://diversity.oregonstate.edu/bias-incident-response-1",
+            'services-description-birf' => "Have you experienced or witnessed an incident of bias at Oregon State? In the university's ongoing efforts to create a safe and inclusive environment for all students, the Office of Institutional Diversity collaborates with campus partners to respond to incidents of bias. This team takes seriously all reports of bias and depending on the circumstances may follow up with campus safety, referrals to university resources, or community outreach. Use this form to report discrimination, bullying or other incidents of bias; reports may be made anonymously.",
+
+            'services-headline-canvas' => "Canvas Support",
+            'services-phone-canvas' => "1-844-329-3084",
+            'services-description-canvas' => "Students can reach 24/7 Canvas support by clicking help in the main Canvas menu (lower left side of screen). Students can chat with a Canvas representative or call the Canvas support hotline at 1-844-329-3084.",
+
+            'services-headline-cdc' => "Career Development Center",
+            'services-phone-cdc' => "541-737-4085",
+            'services-web-cdc' => "https://career.oregonstate.edu/",
+            'services-description-cdc' => "The Career Development Center works to empower, support and nurture OSU students in their exploration and pursuit of lifelong career success and meaningful employment.",
+
+            'services-headline-cccc' => "Centro Cultural César Chávez",
+            'services-phone-cccc' => "541-737-3790",
+            'services-web-cccc' => "https://dce.oregonstate.edu/cccc",
+            'services-description-cccc' => "Celebrating Chicano/Latino/Hispanic cultures, Centro Cultural César Chávez has an event space, areas for students to study, and a comfortable learning atmosphere.",
+
+            'services-headline-cbsd' => "Corvallis-Based Service Desk",
+            'services-phone-cbsd' => "541-737-8787",
+            'services-web-cbsd' => "https://oregonstate.teamdynamix.com/TDClient/1935/Portal/Home/",
+            'services-description-cbsd' => "Whether you're having trouble installing software, connecting to the WiFi network or getting rid of a pesky virus on your computer, the Service Desk has qualified staff to assist you with your computer needs. ",
+
+            'services-headline-caps' => "Counseling & Psychological Services (CAPS)",
+            'services-phone-caps' => "541-737-2131",
+            'services-web-caps' => "https://counseling.oregonstate.edu/",
+            'services-description-caps' => "Committed to improving students’ lives through counseling, resources for managing stress and improving self-esteem, and mindfulness practices, Counseling & Psychological Services (CAPS) is here to help you flourish. CAPS offers many online wellness resources and remote services, including on-going individual counseling and the Single Session Clinic for one-time appointments focused on a particular concern or problem. "
+	),$atts);
+	?>
+	<div class="services-parent-container">
+
+            <div class="services-child-container">
+                  
+                  <div class="services-text"> 
+                        <p id="services-text"><?php echo $data['services-text'] ?></p>
+                  </div>
+
+                  <div class="services">
+
+                        <h4 id="services-headline"><?php echo $data['services-headline-crisis'] ?></h4>
+                        <div class="services-card">
+                              <div class="services-card-row">
+                                    <img id="services-phone-icon" src="<?php echo $data['phone'] ?>" alt="">
+                                    <p id="services-phone"><?php echo $data['services-phone-crisis'] ?></p>
+                              </div>
+                              <div class="services-card-row">
+                                    <img id="services-web-icon" src="<?php echo $data['web'] ?>" alt="">
+                                    <p id="services-web"><a href=<?php echo $data['services-web-crisis'] ?> target="_blank" rel="noopener">24-Hour Crisis Hotline and Services</a></p>
+                              </div>
+                              <p id="services-description"><?php echo $data['services-description-crisis'] ?></p>
+                        </div>
+
+                        <h4 id="services-headline"><?php echo $data['services-headline-asc'] ?></h4>
+                        <div class="services-card">
+                              <div class="services-card-row">
+                                    <img id="services-phone-icon" src="<?php echo $data['phone'] ?>" alt="">
+                                    <p id="services-phone"><?php echo $data['services-phone-asc'] ?></p>
+                              </div>
+                              <div class="services-card-row">
+                                    <img id="services-web-icon" src="<?php echo $data['web'] ?>" alt="">
+                                    <p id="services-web"><a href=<?php echo $data['services-web-asc'] ?> target="_blank" rel="noopener">Academic Success Center (ASC)</a></p>
+                              </div>
+                              <p id="services-description"><?php echo $data['services-description-asc'] ?></p>
+                        </div>
+
+                        <h4 id="services-headline"><?php echo $data['services-headline-athlete'] ?></h4>
+                        <div class="services-card">
+                              <div class="services-card-row">
+                                    <img id="services-phone-icon" src="<?php echo $data['phone'] ?>" alt="">
+                                    <p id="services-phone"><?php echo $data['services-phone-athlete'] ?></p>
+                              </div>
+                              <div class="services-card-row">
+                                    <img id="services-web-icon" src="<?php echo $data['web'] ?>" alt="">
+                                    <p id="services-web"><a href=<?php echo $data['services-web-athlete'] ?> target="_blank" rel="noopener">Academics for Student Athletes</a></p>
+                              </div>
+                              <p id="services-description"><?php echo $data['services-description-athlete'] ?></p>
+                        </div>
+
+                        <h4 id="services-headline"><?php echo $data['services-headline-apcc'] ?></h4>
+                        <div class="services-card">
+                              <div class="services-card-row">
+                                    <img id="services-phone-icon" src="<?php echo $data['phone'] ?>" alt="">
+                                    <p id="services-phone"><?php echo $data['services-phone-apcc'] ?></p>
+                              </div>
+                              <div class="services-card-row">
+                                    <img id="services-web-icon" src="<?php echo $data['web'] ?>" alt="">
+                                    <p id="services-web"><a href=<?php echo $data['services-web-apcc'] ?> target="_blank" rel="noopener">Asian & Pacific Cultural Center</a></p>
+                              </div>
+                              <p id="services-description"><?php echo $data['services-description-apcc'] ?></p>
+                        </div>
+
+                        <h4 id="services-headline"><?php echo $data['services-headline-bnc'] ?></h4>
+                        <div class="services-card">
+                              <div class="services-card-row">
+                                    <img id="services-phone-icon" src="<?php echo $data['phone'] ?>" alt="">
+                                    <p id="services-phone"><?php echo $data['services-phone-bnc'] ?></p>
+                              </div>
+                              <div class="services-card-row">
+                                    <img id="services-web-icon" src="<?php echo $data['web'] ?>" alt="">
+                                    <p id="services-web"><a href=<?php echo $data['services-web-bnc'] ?> target="_blank" rel="noopener">Basic Needs Center</a></p>
+                              </div>
+                              <p id="services-description"><?php echo $data['services-description-bnc'] ?></p>
+                        </div>
+
+                        <h4 id="services-headline"><?php echo $data['services-headline-birf'] ?></h4>
+                        <div class="services-card">
+                              <div class="services-card-row">
+                                    <img id="services-phone-icon" src="<?php echo $data['phone'] ?>" alt="">
+                                    <p id="services-phone"><?php echo $data['services-phone-birf'] ?></p>
+                              </div>
+                              <div class="services-card-row">
+                                    <img id="services-web-icon" src="<?php echo $data['web'] ?>" alt="">
+                                    <p id="services-web"><a href=<?php echo $data['services-web-birf'] ?> target="_blank" rel="noopener">Bias Incident Report Form</a></p>
+                              </div>
+                              <p id="services-description"><?php echo $data['services-description-birf'] ?></p>
+                        </div>
+
+                        <h4 id="services-headline"><?php echo $data['services-headline-canvas'] ?></h4>
+                        <div class="services-card">
+                              <div class="services-card-row">
+                                    <img id="services-phone-icon" src="<?php echo $data['phone'] ?>" alt="">
+                                    <p id="services-phone"><?php echo $data['services-phone-canvas'] ?></p>
+                              </div>
+                              <p id="services-description"><?php echo $data['services-description-canvas'] ?></p>
+                        </div>
+
+                        <h4 id="services-headline"><?php echo $data['services-headline-cdc'] ?></h4>
+                        <div class="services-card">
+                              <div class="services-card-row">
+                                    <img id="services-phone-icon" src="<?php echo $data['phone'] ?>" alt="">
+                                    <p id="services-phone"><?php echo $data['services-phone-cdc'] ?></p>
+                              </div>
+                              <div class="services-card-row">
+                                    <img id="services-web-icon" src="<?php echo $data['web'] ?>" alt="">
+                                    <p id="services-web"><a href=<?php echo $data['services-web-cdc'] ?> target="_blank" rel="noopener">Career Development Center</a></p>
+                              </div>
+                              <p id="services-description"><?php echo $data['services-description-cdc'] ?></p>
+                        </div>
+
+                        <h4 id="services-headline"><?php echo $data['services-headline-cccc'] ?></h4>
+                        <div class="services-card">
+                              <div class="services-card-row">
+                                    <img id="services-phone-icon" src="<?php echo $data['phone'] ?>" alt="">
+                                    <p id="services-phone"><?php echo $data['services-phone-cccc'] ?></p>
+                              </div>
+                              <div class="services-card-row">
+                                    <img id="services-web-icon" src="<?php echo $data['web'] ?>" alt="">
+                                    <p id="services-web"><a href=<?php echo $data['services-web-cccc'] ?> target="_blank" rel="noopener">Centro Cultural César Chávez</a></p>
+                              </div>
+                              <p id="services-description"><?php echo $data['services-description-cccc'] ?></p>
+                        </div>
+
+                        <h4 id="services-headline"><?php echo $data['services-headline-cbsd'] ?></h4>
+                        <div class="services-card">
+                              <div class="services-card-row">
+                                    <img id="services-phone-icon" src="<?php echo $data['phone'] ?>" alt="">
+                                    <p id="services-phone"><?php echo $data['services-phone-cbsd'] ?></p>
+                              </div>
+                              <div class="services-card-row">
+                                    <img id="services-web-icon" src="<?php echo $data['web'] ?>" alt="">
+                                    <p id="services-web"><a href=<?php echo $data['services-web-cbsd'] ?> target="_blank" rel="noopener">Corvallis-Based Service Desk</a></p>
+                              </div>
+                              <p id="services-description"><?php echo $data['services-description-cbsd'] ?></p>
+                        </div>
+
+                        <h4 id="services-headline"><?php echo $data['services-headline-caps'] ?></h4>
+                        <div class="services-card">
+                              <div class="services-card-row">
+                                    <img id="services-phone-icon" src="<?php echo $data['phone'] ?>" alt="">
+                                    <p id="services-phone"><?php echo $data['services-phone-caps'] ?></p>
+                              </div>
+                              <div class="services-card-row">
+                                    <img id="services-web-icon" src="<?php echo $data['web'] ?>" alt="">
+                                    <p id="services-web"><a href=<?php echo $data['services-web-caps'] ?> target="_blank" rel="noopener">Counseling & Psychological Services (CAPS)</a></p>
+                              </div>
+                              <p id="services-description"><?php echo $data['services-description-caps'] ?></p>
+                        </div>
+
+
+                  </div>
+
+            </div>
+      
+      </div>
+	<?php
+	return ob_get_clean();
+}
+add_shortcode('services','services');
